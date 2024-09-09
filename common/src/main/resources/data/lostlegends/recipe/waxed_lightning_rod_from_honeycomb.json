@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "minecraft:lightning_rod"
+		},
+		{
+			"item": "minecraft:honeycomb"
+		}
+	],
+	"result": {
+		"count": 1,
+		"id": "lostlegends:waxed_lightning_rod"
+	}
+}

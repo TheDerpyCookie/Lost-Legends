@@ -1,0 +1,18 @@
+{
+	"structures": [
+		{
+			"structure": "lostlegends:beekeeper_hut",
+			"weight": 1
+		}
+	],
+	"placement": {
+		"salt": 518935210,
+		"spacing": 21,
+		"separation": 7,
+		"type": "minecraft:random_spread",
+		"exclusion_zone": {
+			"other_set": "minecraft:pillager_outposts",
+			"chunk_count": 4
+		}
+	}
+}

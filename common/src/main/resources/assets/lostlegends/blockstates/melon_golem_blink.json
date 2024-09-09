@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "lostlegends:block/melon_golem_blink" },
+        "facing=south": { "model": "lostlegends:block/melon_golem_blink", "y": 180 },
+        "facing=west":  { "model": "lostlegends:block/melon_golem_blink", "y": 270 },
+        "facing=east":  { "model": "lostlegends:block/melon_golem_blink", "y": 90 }
+    }
+}

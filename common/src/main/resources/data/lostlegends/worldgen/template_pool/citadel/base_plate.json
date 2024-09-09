@@ -1,0 +1,15 @@
+{
+	"name": "lostlegends:citadel/base_plate",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 1,
+			"element": {
+				"location": "lostlegends:citadel/citadel",
+				"processors": "lostlegends:citadel/citadel",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

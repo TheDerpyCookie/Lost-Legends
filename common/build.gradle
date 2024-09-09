@@ -1,0 +1,21 @@
+architectury {
+	common(enabled_platforms.split(","))
+}
+
+loom {
+	accessWidenerPath = file("src/main/resources/lostlegends.accesswidener")
+}
+
+dependencies {
+	modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+	modImplementation("me.shedaniel.cloth:cloth-config-fabric:${cloth_config_version}")
+}
+
+repositories {
+	maven {
+		url "https://maven.terraformersmc.com/releases/"
+		content {
+			includeGroup "com.terraformersmc"
+		}
+	}
+}

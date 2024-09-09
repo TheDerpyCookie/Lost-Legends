@@ -1,0 +1,15 @@
+{
+	"name": "lostlegends:citadel/entity/wildfire",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 1,
+			"element": {
+				"location": "lostlegends:citadel/entity/wildfire",
+				"processors": "minecraft:empty",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

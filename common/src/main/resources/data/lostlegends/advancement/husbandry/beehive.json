@@ -1,0 +1,187 @@
+{
+	"parent": "minecraft:husbandry/root",
+	"display": {
+		"title": {
+			"translate": "advancements.husbandry.beehive.title"
+		},
+		"description": {
+			"translate": "advancements.husbandry.beehive.description"
+		},
+		"icon": {
+			"id": "minecraft:beehive"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"criteria": {
+		"beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:beehive"
+						]
+					}
+				]
+			}
+		},
+		"acacia_beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"lostlegends:acacia_beehive"
+						]
+					}
+				]
+			}
+		},
+		"cherry_beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"lostlegends:cherry_beehive"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"lostlegends:bamboo_beehive"
+						]
+					}
+				]
+			}
+		},
+		"birch_beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"lostlegends:birch_beehive"
+						]
+					}
+				]
+			}
+		},
+		"crimson_beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"lostlegends:crimson_beehive"
+						]
+					}
+				]
+			}
+		},
+		"dark_oak_beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"lostlegends:dark_oak_beehive"
+						]
+					}
+				]
+			}
+		},
+		"jungle_beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"lostlegends:jungle_beehive"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"lostlegends:mangrove_beehive"
+						]
+					}
+				]
+			}
+		},
+		"spruce_beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"lostlegends:spruce_beehive"
+						]
+					}
+				]
+			}
+		},
+		"warped_beehive": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"lostlegends:warped_beehive"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"beehive"
+		],
+		[
+			"acacia_beehive"
+		],
+		[
+			"bamboo_beehive"
+		],
+		[
+			"birch_beehive"
+		],
+		[
+			"cherry_beehive"
+		],
+		[
+			"crimson_beehive"
+		],
+		[
+			"dark_oak_beehive"
+		],
+		[
+			"jungle_beehive"
+		],
+		[
+			"mangrove_beehive"
+		],
+		[
+			"spruce_beehive"
+		],
+		[
+			"warped_beehive"
+		]
+	]
+}

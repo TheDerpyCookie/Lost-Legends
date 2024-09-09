@@ -1,0 +1,13 @@
+{
+	"replace": false,
+	"values": [
+		"lostlegends:copper_button",
+		"lostlegends:exposed_copper_button",
+		"lostlegends:oxidized_copper_button",
+		"lostlegends:waxed_copper_button",
+		"lostlegends:waxed_exposed_copper_button",
+		"lostlegends:waxed_oxidized_copper_button",
+		"lostlegends:waxed_weathered_copper_button",
+		"lostlegends:weathered_copper_button"
+	]
+}

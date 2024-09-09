@@ -1,0 +1,15 @@
+{
+	"name": "lostlegends:beekeeper_hut/base_plate",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 1,
+			"element": {
+				"location": "lostlegends:beekeeper_hut/base_plate1",
+				"processors": "lostlegends:beekeeper_hut",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

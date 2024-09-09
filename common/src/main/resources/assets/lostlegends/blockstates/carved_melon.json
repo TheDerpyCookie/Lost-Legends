@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "lostlegends:block/carved_melon" },
+        "facing=south": { "model": "lostlegends:block/carved_melon", "y": 180 },
+        "facing=west":  { "model": "lostlegends:block/carved_melon", "y": 270 },
+        "facing=east":  { "model": "lostlegends:block/carved_melon", "y": 90 }
+    }
+}

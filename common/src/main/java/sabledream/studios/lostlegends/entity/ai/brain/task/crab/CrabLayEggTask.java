@@ -1,0 +1,80 @@
+package sabledream.studios.lostlegends.entity.ai.brain.task.crab;
+
+import net.minecraft.entity.ai.brain.task.MultiTickTask;
+import sabledream.studios.lostlegends.entity.CrabEntity;
+import sabledream.studios.lostlegends.init.LostLegendsBlocks;
+import sabledream.studios.lostlegends.init.LostLegendsMemoryModuleTypes;
+import net.minecraft.block.Block;
+import net.minecraft.block.TurtleEggBlock;
+import net.minecraft.entity.ai.brain.MemoryModuleState;
+import net.minecraft.entity.ai.brain.task.Task;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.world.WorldEvents;
+
+import java.util.Map;
+
+public final class CrabLayEggTask extends MultiTickTask<CrabEntity>
+{
+	private final static float WITHING_DISTANCE = 2.0F;
+
+	public CrabLayEggTask() {
+		super(
+			Map.of(
+				LostLegendsMemoryModuleTypes.CRAB_HAS_EGG.get(), MemoryModuleState.VALUE_PRESENT,
+				LostLegendsMemoryModuleTypes.CRAB_BURROW_POS.get(), MemoryModuleState.VALUE_PRESENT
+			), 100
+		);
+	}
+
+	@Override
+	protected boolean shouldRun(ServerWorld world, CrabEntity crab) {
+		if (
+			crab.getBurrowSpotPos() == null
+			|| crab.isBurrowSpotAccessible(crab.getBurrowSpotPos().pos()) == false
+			|| crab.getBurrowSpotPos().pos().isWithinDistance(crab.getPos(), WITHING_DISTANCE) == false
+			|| crab.getNavigation().isFollowingPath()
+		) {
+			return false;
+		}
+
+		return true;
+	}
+
+	@Override
+	protected void run(ServerWorld world, CrabEntity crab, long time) {
+	}
+
+	@Override
+	protected boolean shouldKeepRunning(ServerWorld world, CrabEntity crab, long time) {
+		return true;
+	}
+
+	@Override
+	protected void keepRunning(ServerWorld world, CrabEntity crab, long time) {
+		var burrowSpotPos = crab.getBurrowSpotPos();
+
+		if (burrowSpotPos == null || time % 5 != 0) {
+			return;
+		}
+
+		// TODO animation
+		world.syncWorldEvent(WorldEvents.BLOCK_BROKEN, burrowSpotPos.pos(), Block.getRawIdFromState(world.getBlockState(burrowSpotPos.pos().down())));
+	}
+
+	@Override
+	protected void finishRunning(ServerWorld world, CrabEntity crab, long time) {
+		var burrowSpotPos = crab.getBurrowSpotPos();
+
+		if (burrowSpotPos != null) {
+			// TODO change sound
+			world.playSound(null, burrowSpotPos.pos(), SoundEvents.ENTITY_TURTLE_LAY_EGG, SoundCategory.BLOCKS, 0.3f, 0.9f + world.random.nextFloat() * 0.2f);
+			world.setBlockState(burrowSpotPos.pos(), LostLegendsBlocks.CRAB_EGG.get().getDefaultState().with(TurtleEggBlock.EGGS, crab.getRandom().nextInt(4) + 1), Block.NOTIFY_ALL);
+		}
+
+		crab.setHasEgg(false);
+		crab.setLoveTicks(600);
+		crab.getBrain().forget(LostLegendsMemoryModuleTypes.CRAB_BURROW_POS.get());
+	}
+}

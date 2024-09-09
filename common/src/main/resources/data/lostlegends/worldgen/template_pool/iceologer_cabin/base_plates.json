@@ -1,0 +1,15 @@
+{
+	"name": "lostlegends:iceologer_cabin/base_plates",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 1,
+			"element": {
+				"location": "lostlegends:iceologer_cabin/base_plate",
+				"processors": "lostlegends:iceologer_cabin_base_plate",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

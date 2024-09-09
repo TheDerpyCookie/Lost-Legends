@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"C": {
+			"item": "lostlegends:wildfire_crown_fragment"
+		}
+	},
+	"pattern": [
+		"CCC",
+		"C C"
+	],
+	"result": {
+		"count": 1,
+		"id": "lostlegends:wildfire_crown"
+	}
+}

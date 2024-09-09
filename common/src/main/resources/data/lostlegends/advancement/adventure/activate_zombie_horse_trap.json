@@ -1,0 +1,29 @@
+{
+	"parent": "minecraft:adventure/root",
+	"display": {
+		"icon": {
+			"id": "minecraft:chainmail_helmet"
+		},
+		"title": {
+			"translate": "advancements.survival.activate_zombie_horse_trap.title"
+		},
+		"description": {
+			"translate": "advancements.survival.activate_zombie_horse_trap.description"
+		},
+		"frame": "goal",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": true
+	},
+	"criteria": {
+		"lostlegends:activate_zombie_horse_trap": {
+			"conditions": {},
+			"trigger": "lostlegends:activate_zombie_horse_trap"
+		}
+	},
+	"requirements": [
+		[
+			"lostlegends:activate_zombie_horse_trap"
+		]
+	]
+}

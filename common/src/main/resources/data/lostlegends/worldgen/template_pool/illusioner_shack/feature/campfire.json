@@ -1,0 +1,15 @@
+{
+	"name": "lostlegends:illusioner_shack/feature/campfire",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 1,
+			"element": {
+				"location": "lostlegends:illusioner_shack/feature/campfire",
+				"processors": "lostlegends:illusioner_shack_campfire",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

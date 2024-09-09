@@ -1,0 +1,208 @@
+{
+	"variants": {
+		"eggs=1,hatch=0": [
+			{
+				"model": "lostlegends:block/crab_egg"
+			},
+			{
+				"model": "lostlegends:block/crab_egg",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/crab_egg",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/crab_egg",
+				"y": 270
+			}
+		],
+		"eggs=1,hatch=1": [
+			{
+				"model": "lostlegends:block/slightly_cracked_crab_egg"
+			},
+			{
+				"model": "lostlegends:block/slightly_cracked_crab_egg",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/slightly_cracked_crab_egg",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/slightly_cracked_crab_egg",
+				"y": 270
+			}
+		],
+		"eggs=1,hatch=2": [
+			{
+				"model": "lostlegends:block/very_cracked_crab_egg"
+			},
+			{
+				"model": "lostlegends:block/very_cracked_crab_egg",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/very_cracked_crab_egg",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/very_cracked_crab_egg",
+				"y": 270
+			}
+		],
+		"eggs=2,hatch=0": [
+			{
+				"model": "lostlegends:block/two_crab_eggs"
+			},
+			{
+				"model": "lostlegends:block/two_crab_eggs",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/two_crab_eggs",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/two_crab_eggs",
+				"y": 270
+			}
+		],
+		"eggs=2,hatch=1": [
+			{
+				"model": "lostlegends:block/two_slightly_cracked_crab_eggs"
+			},
+			{
+				"model": "lostlegends:block/two_slightly_cracked_crab_eggs",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/two_slightly_cracked_crab_eggs",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/two_slightly_cracked_crab_eggs",
+				"y": 270
+			}
+		],
+		"eggs=2,hatch=2": [
+			{
+				"model": "lostlegends:block/two_very_cracked_crab_eggs"
+			},
+			{
+				"model": "lostlegends:block/two_very_cracked_crab_eggs",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/two_very_cracked_crab_eggs",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/two_very_cracked_crab_eggs",
+				"y": 270
+			}
+		],
+		"eggs=3,hatch=0": [
+			{
+				"model": "lostlegends:block/three_crab_eggs"
+			},
+			{
+				"model": "lostlegends:block/three_crab_eggs",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/three_crab_eggs",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/three_crab_eggs",
+				"y": 270
+			}
+		],
+		"eggs=3,hatch=1": [
+			{
+				"model": "lostlegends:block/three_slightly_cracked_crab_eggs"
+			},
+			{
+				"model": "lostlegends:block/three_slightly_cracked_crab_eggs",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/three_slightly_cracked_crab_eggs",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/three_slightly_cracked_crab_eggs",
+				"y": 270
+			}
+		],
+		"eggs=3,hatch=2": [
+			{
+				"model": "lostlegends:block/three_very_cracked_crab_eggs"
+			},
+			{
+				"model": "lostlegends:block/three_very_cracked_crab_eggs",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/three_very_cracked_crab_eggs",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/three_very_cracked_crab_eggs",
+				"y": 270
+			}
+		],
+		"eggs=4,hatch=0": [
+			{
+				"model": "lostlegends:block/four_crab_eggs"
+			},
+			{
+				"model": "lostlegends:block/four_crab_eggs",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/four_crab_eggs",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/four_crab_eggs",
+				"y": 270
+			}
+		],
+		"eggs=4,hatch=1": [
+			{
+				"model": "lostlegends:block/four_slightly_cracked_crab_eggs"
+			},
+			{
+				"model": "lostlegends:block/four_slightly_cracked_crab_eggs",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/four_slightly_cracked_crab_eggs",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/four_slightly_cracked_crab_eggs",
+				"y": 270
+			}
+		],
+		"eggs=4,hatch=2": [
+			{
+				"model": "lostlegends:block/four_very_cracked_crab_eggs"
+			},
+			{
+				"model": "lostlegends:block/four_very_cracked_crab_eggs",
+				"y": 90
+			},
+			{
+				"model": "lostlegends:block/four_very_cracked_crab_eggs",
+				"y": 180
+			},
+			{
+				"model": "lostlegends:block/four_very_cracked_crab_eggs",
+				"y": 270
+			}
+		]
+	}
+}

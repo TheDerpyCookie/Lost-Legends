@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "lostlegends:block/tiny_cactus_alt"
+    }
+}

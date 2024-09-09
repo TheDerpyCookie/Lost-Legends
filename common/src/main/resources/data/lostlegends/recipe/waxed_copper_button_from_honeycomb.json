@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "lostlegends:copper_button"
+		},
+		{
+			"item": "minecraft:honeycomb"
+		}
+	],
+	"result": {
+		"count": 1,
+		"id": "lostlegends:waxed_copper_button"
+	}
+}

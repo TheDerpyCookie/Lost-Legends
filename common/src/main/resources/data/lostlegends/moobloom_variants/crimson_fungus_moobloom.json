@@ -1,0 +1,5 @@
+{
+	"name": "crimson_fungus",
+	"flower_block": "minecraft:crimson_fungus",
+	"biomes": "#lostlegends:has_moobloom/crimson_fungus"
+}

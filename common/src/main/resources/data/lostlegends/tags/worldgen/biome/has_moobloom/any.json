@@ -1,0 +1,21 @@
+{
+	"replace": false,
+	"values": [
+		"#lostlegends:has_moobloom/allium",
+		"#lostlegends:has_moobloom/azure_bluet",
+		"#lostlegends:has_moobloom/blue_orchid",
+		"#lostlegends:has_moobloom/cornflower",
+		"#lostlegends:has_moobloom/dandelion",
+		"#lostlegends:has_moobloom/lilac",
+		"#lostlegends:has_moobloom/lily_of_the_valley",
+		"#lostlegends:has_moobloom/orange_tulip",
+		"#lostlegends:has_moobloom/oxeye_daisy",
+		"#lostlegends:has_moobloom/peony",
+		"#lostlegends:has_moobloom/pink_tulip",
+		"#lostlegends:has_moobloom/poppy",
+		"#lostlegends:has_moobloom/red_tulip",
+		"#lostlegends:has_moobloom/rose_bush",
+		"#lostlegends:has_moobloom/sunflower",
+		"#lostlegends:has_moobloom/white_tulip"
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"replace": false,
+	"values": [
+		"lostlegends:exposed_lightning_rod",
+		"lostlegends:weathered_lightning_rod",
+		"lostlegends:oxidized_lightning_rod",
+		"lostlegends:waxed_lightning_rod",
+		"lostlegends:waxed_exposed_lightning_rod",
+		"lostlegends:waxed_oxidized_lightning_rod",
+		"lostlegends:waxed_weathered_lightning_rod"
+	]
+}

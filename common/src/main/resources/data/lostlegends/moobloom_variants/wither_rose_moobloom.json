@@ -1,0 +1,5 @@
+{
+	"name": "wither_rose",
+	"flower_block": "minecraft:wither_rose",
+	"biomes": "#lostlegends:has_moobloom/wither_rose"
+}

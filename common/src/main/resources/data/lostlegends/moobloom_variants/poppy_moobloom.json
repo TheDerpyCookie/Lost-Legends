@@ -1,0 +1,5 @@
+{
+	"name": "poppy",
+	"flower_block": "minecraft:poppy",
+	"biomes": "#lostlegends:has_moobloom/poppy"
+}

@@ -1,0 +1,5 @@
+{
+	"name": "cherry_sapling",
+	"flower_block": "minecraft:cherry_sapling",
+	"biomes": "#lostlegends:has_moobloom/cherry_sapling"
+}

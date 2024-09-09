@@ -1,0 +1,47 @@
+{
+	"schemaVersion": 1,
+	"id": "${modId}",
+	"version": "${modVersion}",
+	"name": "${modName}",
+	"description": "${modDescription}",
+	"authors": [
+		"${modAuthor}"
+	],
+	"license": "CC-BY-NC-ND-4.0",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"sabledream.studios.lostlegends.fabric.LostLegendsFabric"
+		],
+		"client": [
+			"sabledream.studios.lostlegends.fabric.LostLegendsFabricClient"
+		],
+		"preLaunch": [
+			"com.llamalad7.mixinextras.MixinExtrasBootstrap::init"
+		],
+		"modmenu": [
+			"sabledream.studios.lostlegends.modcompat.fabric.ModMenuCompat"
+		]
+	},
+	"mixins": [
+		"lostlegends-common.mixins.json",
+      "lostlegends-fabric.mixins.json"
+	],
+	"depends": {
+		"java": ">=21",
+		"minecraft": ">=${minMinecraftVersion}",
+		"fabricloader": ">=${fabricLoaderVersion}",
+		"fabric": ">=${fabricApiVersion}"
+	},
+	"custom": {
+		"catalogue": {
+			"configFactory": "sabledream.studios.lostlegends.modcompat.fabric.CatalogueCompat",
+			"icon": {
+				"image": "catalogue_icon.png"
+			},
+			"banner": "catalogue_logo.png",
+			"background": "catalogue_background.png"
+		}
+	}
+}

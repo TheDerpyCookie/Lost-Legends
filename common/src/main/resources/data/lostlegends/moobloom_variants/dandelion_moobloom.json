@@ -1,0 +1,5 @@
+{
+	"name": "dandelion",
+	"flower_block": "minecraft:dandelion",
+	"biomes": "#lostlegends:has_moobloom/dandelion"
+}

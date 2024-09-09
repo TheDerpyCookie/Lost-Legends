@@ -1,0 +1,33 @@
+{
+	"name": "lostlegends:citadel/bridge/bridge_middle",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 5,
+			"element": {
+				"location": "lostlegends:citadel/bridge/bridge_end",
+				"processors": "lostlegends:citadel/citadel",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 3,
+			"element": {
+				"location": "lostlegends:citadel/bridge/bridge_middle",
+				"processors": "lostlegends:citadel/citadel",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 1,
+			"element": {
+				"location": "lostlegends:citadel/bridge/bridge_middle_damaged",
+				"processors": "lostlegends:citadel/citadel",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

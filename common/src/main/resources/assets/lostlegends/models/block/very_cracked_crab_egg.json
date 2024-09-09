@@ -1,0 +1,6 @@
+{
+	"parent": "lostlegends:block/template_crab_egg",
+	"textures": {
+		"all": "lostlegends:block/crab_egg_very_cracked"
+	}
+}

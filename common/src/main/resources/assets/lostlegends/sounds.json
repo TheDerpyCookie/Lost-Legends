@@ -1,0 +1,565 @@
+{
+	"entity.skeleton_wolf.ambient": {
+		"sounds": [
+			"lostlegends:entity/skeleton_wolf/bark1",
+			"lostlegends:entity/skeleton_wolf/bark2",
+			"lostlegends:entity/skeleton_wolf/bark3"
+		]
+	},
+	"entity.skeleton_wolf.death": {
+		"sounds": [
+			"lostlegends:entity/skeleton_wolf/death"
+		]
+	},
+	"entity.skeleton_wolf.growl": {
+		"sounds": [
+			"lostlegends:entity/skeleton_wolf/growl1",
+			"lostlegends:entity/skeleton_wolf/growl2",
+			"lostlegends:entity/skeleton_wolf/growl3"
+		]
+	},
+	"entity.skeleton_wolf.howl": {
+		"sounds": [
+			"lostlegends:entity/skeleton_wolf/howl1"
+		]
+	},
+	"entity.skeleton_wolf.hurt": {
+		"sounds": [
+			"lostlegends:entity/skeleton_wolf/hurt1",
+			"lostlegends:entity/skeleton_wolf/hurt2",
+			"lostlegends:entity/skeleton_wolf/hurt3"
+		]
+	},
+	"entity.skeleton_wolf.pant": {
+		"sounds": [
+			"lostlegends:entity/skeleton_wolf/pant"
+		]
+	},
+	"entity.skeleton_wolf.shake": {
+		"sounds": [
+			"lostlegends:entity/skeleton_wolf/shake"
+		]
+	},
+	"entity.skeleton_wolf.step": {
+		"sounds": [
+			"lostlegends:entity/skeleton_wolf/step1",
+			"lostlegends:entity/skeleton_wolf/step2",
+			"lostlegends:entity/skeleton_wolf/step3",
+			"lostlegends:entity/skeleton_wolf/step4",
+			"lostlegends:entity/skeleton_wolf/step5"
+		]
+	},
+	"entity.skeleton_wolf.whine": {
+		"sounds": [
+			"lostlegends:entity/skeleton_wolf/whine"
+		]
+	},
+	"entity.copper_golem.death": {
+		"sounds": [
+			"lostlegends:entity/copper_golem/death"
+		],
+		"subtitle": "subtitle.entity.lostlegends.copper_golem.death"
+	},
+	"entity.copper_golem.head_spin": {
+		"sounds": [
+			"lostlegends:entity/copper_golem/head_spin1",
+			"lostlegends:entity/copper_golem/head_spin2"
+		],
+		"subtitle": "subtitle.entity.lostlegends.copper_golem.head_spin"
+	},
+	"entity.copper_golem.hurt": {
+		"sounds": [
+			"lostlegends:entity/copper_golem/hurt1",
+			"lostlegends:entity/copper_golem/hurt2",
+			"lostlegends:entity/copper_golem/hurt3",
+			"lostlegends:entity/copper_golem/hurt4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.copper_golem.hurt"
+	},
+	"entity.copper_golem.repair": {
+		"sounds": [
+			"lostlegends:entity/copper_golem/repair"
+		],
+		"subtitle": "subtitle.entity.lostlegends.copper_golem.repair"
+	},
+	"entity.copper_golem.step": {
+		"sounds": [
+			"lostlegends:entity/copper_golem/step1",
+			"lostlegends:entity/copper_golem/step2",
+			"lostlegends:entity/copper_golem/step3",
+			"lostlegends:entity/copper_golem/step4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.copper_golem.step"
+	},
+	"entity.glare.ambient": {
+		"sounds": [
+			"lostlegends:entity/glare/ambient1",
+			"lostlegends:entity/glare/ambient2"
+		],
+		"subtitle": "subtitle.entity.lostlegends.glare.ambient"
+	},
+	"entity.glare.death": {
+		"sounds": [
+			"lostlegends:entity/glare/death"
+		],
+		"subtitle": "subtitle.entity.lostlegends.glare.death"
+	},
+	"entity.glare.eat": {
+		"sounds": [
+			"lostlegends:entity/glare/eat"
+		],
+		"subtitle": "subtitle.entity.lostlegends.glare.eat"
+	},
+	"entity.glare.grumpiness": {
+		"sounds": [
+			"lostlegends:entity/glare/grumpiness"
+		],
+		"subtitle": "subtitle.entity.lostlegends.glare.grumpiness"
+	},
+	"entity.glare.grumpiness_short": {
+		"sounds": [
+			"lostlegends:entity/glare/grumpiness_short"
+		],
+		"subtitle": "subtitle.entity.lostlegends.glare.grumpiness_short"
+	},
+	"entity.glare.hurt": {
+		"sounds": [
+			"lostlegends:entity/glare/hurt1",
+			"lostlegends:entity/glare/hurt2"
+		],
+		"subtitle": "subtitle.entity.lostlegends.glare.hurt"
+	},
+	"entity.glare.rustle": {
+		"sounds": [
+			"lostlegends:entity/glare/rustle1",
+			"lostlegends:entity/glare/rustle2",
+			"lostlegends:entity/glare/rustle3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.glare.rustle"
+	},
+	"entity.glare.shake": {
+		"sounds": [
+			"lostlegends:entity/glare/shake1",
+			"lostlegends:entity/glare/shake2",
+			"lostlegends:entity/glare/shake3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.glare.shake"
+	},
+	"entity.ice_chunk.ambient": {
+		"sounds": [
+			"lostlegends:entity/ice_chunk/ambient"
+		],
+		"subtitle": "subtitle.entity.lostlegends.ice_chunk.ambient"
+	},
+	"entity.ice_chunk.hit": {
+		"sounds": [
+			"lostlegends:entity/ice_chunk/hit"
+		],
+		"subtitle": "subtitle.entity.lostlegends.ice_chunk.hit"
+	},
+	"entity.ice_chunk.summon": {
+		"sounds": [
+			"lostlegends:entity/ice_chunk/summon"
+		],
+		"subtitle": "subtitle.entity.lostlegends.ice_chunk.summon"
+	},
+	"entity.iceologer.ambient": {
+		"sounds": [
+			"lostlegends:entity/iceologer/ambient1",
+			"lostlegends:entity/iceologer/ambient2",
+			"lostlegends:entity/iceologer/ambient3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.iceologer.ambient"
+	},
+	"entity.iceologer.cast_spell": {
+		"sounds": [
+			"lostlegends:entity/iceologer/cast_spell1",
+			"lostlegends:entity/iceologer/cast_spell2"
+		],
+		"subtitle": "subtitle.entity.lostlegends.iceologer.cast_spell"
+	},
+	"entity.iceologer.death": {
+		"sounds": [
+			"lostlegends:entity/iceologer/death1",
+			"lostlegends:entity/iceologer/death2",
+			"lostlegends:entity/iceologer/death3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.iceologer.death"
+	},
+	"entity.iceologer.hurt": {
+		"sounds": [
+			"lostlegends:entity/iceologer/hurt1",
+			"lostlegends:entity/iceologer/hurt2",
+			"lostlegends:entity/iceologer/hurt3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.iceologer.hurt"
+	},
+	"entity.iceologer.prepare_slowness": {
+		"sounds": [
+			"lostlegends:entity/iceologer/prepare_slowness"
+		],
+		"subtitle": "subtitle.entity.lostlegends.iceologer.prepare_slowness"
+	},
+	"entity.iceologer.prepare_summon": {
+		"sounds": [
+			"lostlegends:entity/iceologer/prepare_summon"
+		],
+		"subtitle": "subtitle.entity.lostlegends.iceologer.prepare_summon"
+	},
+	"entity.mauler.bite": {
+		"sounds": [
+			"lostlegends:entity/mauler/bite"
+		],
+		"subtitle": "subtitle.entity.lostlegends.mauler.bite"
+	},
+	"entity.mauler.death": {
+		"sounds": [
+			"lostlegends:entity/mauler/death"
+		],
+		"subtitle": "subtitle.entity.lostlegends.mauler.death"
+	},
+	"entity.mauler.growl": {
+		"sounds": [
+			"lostlegends:entity/mauler/growl1",
+			"lostlegends:entity/mauler/growl2",
+			"lostlegends:entity/mauler/growl3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.mauler.growl"
+	},
+	"entity.mauler.hurt": {
+		"sounds": [
+			"lostlegends:entity/mauler/hurt"
+		],
+		"subtitle": "subtitle.entity.lostlegends.mauler.hurt"
+	},
+	"entity.moobloom.convert": {
+		"sounds": [
+			"lostlegends:entity/moobloom/convert1",
+			"lostlegends:entity/moobloom/convert2"
+		],
+		"subtitle": "subtitle.entity.lostlegends.moobloom.convert"
+	},
+	"entity.player.mirror_move": {
+		"sounds": [
+			"lostlegends:entity/player/mirror_move1",
+			"lostlegends:entity/player/mirror_move2"
+		],
+		"subtitle": "subtitle.entity.lostlegends.player.mirror_move"
+	},
+	"entity.rascal.ambient": {
+		"sounds": [
+			"lostlegends:entity/rascal/ambient1",
+			"lostlegends:entity/rascal/ambient2",
+			"lostlegends:entity/rascal/ambient3",
+			"lostlegends:entity/rascal/ambient4",
+			"lostlegends:entity/rascal/ambient5"
+		],
+		"subtitle": "subtitle.entity.lostlegends.rascal.ambient"
+	},
+	"entity.rascal.disappear": {
+		"sounds": [
+			"lostlegends:entity/rascal/disappear1",
+			"lostlegends:entity/rascal/disappear2"
+		],
+		"subtitle": "subtitle.entity.lostlegends.rascal.disappear"
+	},
+	"entity.rascal.hurt": {
+		"sounds": [
+			"lostlegends:entity/rascal/hurt1",
+			"lostlegends:entity/rascal/hurt2",
+			"lostlegends:entity/rascal/hurt3",
+			"lostlegends:entity/rascal/hurt4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.rascal.hurt"
+	},
+	"entity.rascal.nod": {
+		"sounds": [
+			"lostlegends:entity/rascal/nod1",
+			"lostlegends:entity/rascal/nod2",
+			"lostlegends:entity/rascal/nod3",
+			"lostlegends:entity/rascal/nod4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.rascal.nod"
+	},
+	"entity.rascal.reappear": {
+		"sounds": [
+			"lostlegends:entity/rascal/reappear1",
+			"lostlegends:entity/rascal/reappear2"
+		],
+		"subtitle": "subtitle.entity.lostlegends.rascal.reappear"
+	},
+	"entity.rascal.reward": {
+		"sounds": [
+			"lostlegends:entity/rascal/reward1",
+			"lostlegends:entity/rascal/reward2"
+		],
+		"subtitle": "subtitle.entity.lostlegends.rascal.reward"
+	},
+	"entity.rascal.reward_bad": {
+		"sounds": [
+			"lostlegends:entity/rascal/reward_bad1",
+			"lostlegends:entity/rascal/reward_bad2",
+			"lostlegends:entity/rascal/reward_bad3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.rascal.reward_bad"
+	},
+	"entity.tuff_golem.glue_on": {
+		"sounds": [
+			"lostlegends:entity/tuff_golem/glue_on"
+		],
+		"subtitle": "subtitle.entity.lostlegends.tuff_golem.glue_on"
+	},
+	"entity.tuff_golem.glue_off": {
+		"sounds": [
+			"lostlegends:entity/tuff_golem/glue_off"
+		],
+		"subtitle": "subtitle.entity.lostlegends.tuff_golem.glue_off"
+	},
+	"entity.tuff_golem.hurt": {
+		"sounds": [
+			"lostlegends:entity/tuff_golem/hurt1",
+			"lostlegends:entity/tuff_golem/hurt2",
+			"lostlegends:entity/tuff_golem/hurt3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.tuff_golem.hurt"
+	},
+	"entity.tuff_golem.move": {
+		"sounds": [
+			"lostlegends:entity/tuff_golem/move1",
+			"lostlegends:entity/tuff_golem/move2"
+		],
+		"subtitle": "subtitle.entity.lostlegends.tuff_golem.move"
+	},
+	"entity.tuff_golem.repair": {
+		"sounds": [
+			"lostlegends:entity/tuff_golem/repair"
+		],
+		"subtitle": "subtitle.entity.lostlegends.tuff_golem.repair"
+	},
+	"entity.tuff_golem.sleep": {
+		"sounds": [
+			"lostlegends:entity/tuff_golem/sleep"
+		],
+		"subtitle": "subtitle.entity.lostlegends.tuff_golem.sleep"
+	},
+	"entity.tuff_golem.step": {
+		"sounds": [
+			"lostlegends:entity/tuff_golem/step1",
+			"lostlegends:entity/tuff_golem/step2",
+			"lostlegends:entity/tuff_golem/step3",
+			"lostlegends:entity/tuff_golem/step4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.tuff_golem.step"
+	},
+	"entity.tuff_golem.wake": {
+		"sounds": [
+			"lostlegends:entity/tuff_golem/wake"
+		],
+		"subtitle": "subtitle.entity.lostlegends.tuff_golem.wake"
+	},
+	"entity.shield_debris.impact": {
+		"sounds": [
+			"lostlegends:entity/shield_debris/impact1",
+			"lostlegends:entity/shield_debris/impact2",
+			"lostlegends:entity/shield_debris/impact3",
+			"lostlegends:entity/shield_debris/impact4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.shield_debris.impact"
+	},
+	"entity.wildfire.ambient": {
+		"sounds": [
+			"lostlegends:entity/wildfire/ambient1",
+			"lostlegends:entity/wildfire/ambient2",
+			"lostlegends:entity/wildfire/ambient3",
+			"lostlegends:entity/wildfire/ambient4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.wildfire.ambient"
+	},
+	"entity.wildfire.death": {
+		"sounds": [
+			"lostlegends:entity/wildfire/death1",
+			"lostlegends:entity/wildfire/death2",
+			"lostlegends:entity/wildfire/death3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.wildfire.death"
+	},
+	"entity.wildfire.hurt": {
+		"sounds": [
+			"lostlegends:entity/wildfire/hurt1",
+			"lostlegends:entity/wildfire/hurt2",
+			"lostlegends:entity/wildfire/hurt3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.wildfire.hurt"
+	},
+	"entity.wildfire.shield_break": {
+		"sounds": [
+			"lostlegends:entity/wildfire/shield_break1",
+			"lostlegends:entity/wildfire/shield_break2",
+			"lostlegends:entity/wildfire/shield_break3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.wildfire.shield_break"
+	},
+	"entity.wildfire.shockwave": {
+		"sounds": [
+			"lostlegends:entity/wildfire/shockwave1",
+			"lostlegends:entity/wildfire/shockwave2",
+			"lostlegends:entity/wildfire/shockwave3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.wildfire.shoot"
+	},
+	"entity.wildfire.shoot": {
+		"sounds": [
+			"lostlegends:entity/wildfire/shoot1",
+			"lostlegends:entity/wildfire/shoot2",
+			"lostlegends:entity/wildfire/shoot3",
+			"lostlegends:entity/wildfire/shoot4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.wildfire.shoot"
+	},
+	"entity.wildfire.step": {
+		"sounds": [
+			"lostlegends:entity/wildfire/step1",
+			"lostlegends:entity/wildfire/step2",
+			"lostlegends:entity/wildfire/step3",
+			"lostlegends:entity/wildfire/step4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.wildfire.step"
+	},
+	"entity.wildfire.summon_blaze": {
+		"sounds": [
+			"lostlegends:entity/wildfire/summon_blaze1",
+			"lostlegends:entity/wildfire/summon_blaze2",
+			"lostlegends:entity/wildfire/summon_blaze3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.wildfire.summon_blaze"
+	},
+	"entity.crab.step": {
+		"sounds": [
+			"lostlegends:entity/crab/step1",
+			"lostlegends:entity/crab/step2",
+			"lostlegends:entity/crab/step3",
+			"lostlegends:entity/crab/step4",
+			"lostlegends:entity/crab/step5"
+		],
+		"subtitle": "subtitle.entity.lostlegends.crab.step"
+	},
+	"entity.barnacle.ambient": {
+		"sounds": [
+			"lostlegends:entity/barnacle/ambient1",
+			"lostlegends:entity/barnacle/ambient2",
+			"lostlegends:entity/barnacle/ambient3",
+			"lostlegends:entity/barnacle/ambient4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.barnacle.ambient"
+	},
+	"entity.barnacle.hurt": {
+		"sounds": [
+			"lostlegends:entity/barnacle/hurt1",
+			"lostlegends:entity/barnacle/hurt2",
+			"lostlegends:entity/barnacle/hurt3",
+			"lostlegends:entity/barnacle/hurt4"
+		],
+		"subtitle": "subtitle.entity.lostlegends.barnacle.hurt"
+	},
+	"entity.penguin.ambient": {
+		"sounds": [
+			"lostlegends:entity/penguin/ambient1",
+			"lostlegends:entity/penguin/ambient2",
+			"lostlegends:entity/penguin/ambient3"
+		],
+		"subtitle": "subtitle.entity.lostlegends.penguin.ambient"
+	},
+	"entity.penguin.step": {
+		"sounds": [
+			"lostlegends:entity/penguin/step1",
+			"lostlegends:entity/penguin/step2",
+			"lostlegends:entity/penguin/step3",
+			"lostlegends:entity/penguin/step4",
+			"lostlegends:entity/penguin/step5"
+		],
+		"subtitle": "subtitle.entity.lostlegends.penguin.step"
+	},
+	"entity.cluckshroom.lay_mushroom": {
+		"sounds": [
+			"lostlegends:entity/cluckshroom/lay_mushroom"
+		]
+	},
+	"entity.fancy_chicken.ambient": {
+		"sounds": [
+			"lostlegends:entity/fancy_chicken/say_01",
+			"lostlegends:entity/fancy_chicken/say_02",
+			"lostlegends:entity/fancy_chicken/say_03",
+			"lostlegends:entity/fancy_chicken/say_04"
+		]
+	},
+	"entity.fancy_chicken.death": {
+		"sounds": [
+			"lostlegends:entity/fancy_chicken/death_01",
+			"lostlegends:entity/fancy_chicken/death_02"
+		]
+	},
+	"entity.fancy_chicken.flee": {
+		"sounds": [
+			"lostlegends:entity/fancy_chicken/flee_01",
+			"lostlegends:entity/fancy_chicken/flee_02"
+		]
+	},
+	"entity.fancy_chicken.hurt": {
+		"sounds": [
+			"lostlegends:entity/fancy_chicken/hurt_01",
+			"lostlegends:entity/fancy_chicken/hurt_02"
+		]
+	},
+	"entity.moolip.plant": {
+		"sounds": [
+			"lostlegends:entity/moolip/plant"
+		]
+	},
+	"entity.melon_golem.aggro": {
+		"sounds": [
+			"lostlegends:entity/melon_golem/aggro_01"
+		]
+	},
+	"entity.melon_golem.attack": {
+		"sounds": [
+			"lostlegends:entity/melon_golem/spit_01"
+		]
+	},
+	"entity.melon_golem.charge": {
+		"sounds": [
+			"lostlegends:entity/melon_golem/charge_01",
+			"lostlegends:entity/melon_golem/charge_02"
+		]
+	},
+	"entity.melon_golem.seed.hit": {
+		"sounds": [
+			"lostlegends:entity/melon_golem/seed/seed_01",
+			"lostlegends:entity/melon_golem/seed/seed_02",
+			"lostlegends:entity/melon_golem/seed/seed_03"
+		]
+	},
+	"entity.furnace_golem.aggro": {
+		"sounds": [
+			"lostlegends:entity/furnace_golem/aggro_01",
+			"lostlegends:entity/furnace_golem/aggro_02",
+			"lostlegends:entity/furnace_golem/aggro_03",
+			"lostlegends:entity/furnace_golem/aggro_04",
+			"lostlegends:entity/furnace_golem/aggro_05",
+			"lostlegends:entity/furnace_golem/aggro_06"
+		]
+	},
+	"entity.furnace_golem.attack": {
+		"sounds": [
+			"lostlegends:entity/furnace_golem/attack_01",
+			"lostlegends:entity/furnace_golem/attack_02",
+			"lostlegends:entity/furnace_golem/attack_03"
+		]
+	},
+	"entity.viler_witch.casting": {
+		"sounds": [
+			"lostlegends:entity/viler_witch/casting_01",
+			"lostlegends:entity/viler_witch/casting_02",
+			"lostlegends:entity/viler_witch/casting_03"
+		]
+	}
+}

@@ -1,0 +1,5 @@
+{
+	"name": "warped_fungus",
+	"flower_block": "minecraft:warped_fungus",
+	"biomes": "#lostlegends:has_moobloom/warped_fungus"
+}

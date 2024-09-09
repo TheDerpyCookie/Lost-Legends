@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "pink_dye",
+  "ingredients": [
+    {
+      "item": "lostlegends:pinkdaisy"
+    }
+  ],
+  "result": {
+    "id": "minecraft:pink_dye"
+  }
+}

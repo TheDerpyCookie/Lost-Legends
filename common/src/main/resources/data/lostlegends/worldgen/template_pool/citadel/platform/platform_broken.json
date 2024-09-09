@@ -1,0 +1,33 @@
+{
+	"name": "lostlegends:citadel/platform/platform_broken",
+	"fallback": "minecraft:empty",
+	"elements": [
+		{
+			"weight": 5,
+			"element": {
+				"location": "lostlegends:citadel/platform/platform_broken",
+				"processors": "lostlegends:citadel/citadel",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 3,
+			"element": {
+				"location": "lostlegends:citadel/platform/platform_damaged",
+				"processors": "lostlegends:citadel/citadel",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		},
+		{
+			"weight": 1,
+			"element": {
+				"location": "lostlegends:citadel/platform/platform",
+				"processors": "lostlegends:citadel/citadel",
+				"projection": "rigid",
+				"element_type": "minecraft:single_pool_element"
+			}
+		}
+	]
+}

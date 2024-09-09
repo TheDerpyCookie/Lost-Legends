@@ -1,0 +1,10 @@
+{
+	"parent": "minecraft:block/orientable_with_bottom",
+	"textures": {
+		"top": "lostlegends:block/cherry_beehive_end",
+		"bottom": "lostlegends:block/cherry_beehive_end",
+		"side": "lostlegends:block/cherry_beehive_side",
+		"front": "lostlegends:block/cherry_beehive_front",
+		"particle": "lostlegends:block/cherry_beehive_side"
+	}
+}

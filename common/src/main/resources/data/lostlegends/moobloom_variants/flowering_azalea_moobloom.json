@@ -1,0 +1,5 @@
+{
+	"name": "flowering_azalea",
+	"flower_block": "minecraft:flowering_azalea",
+	"biomes": "#lostlegends:has_moobloom/flowering_azalea"
+}

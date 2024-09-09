@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "lostlegends:raw_ostrich"
+  },
+  "result": {
+    "id": "lostlegends:cooked_ostrich"
+  }
+}

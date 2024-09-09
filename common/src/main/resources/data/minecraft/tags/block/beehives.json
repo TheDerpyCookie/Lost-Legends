@@ -1,0 +1,15 @@
+{
+	"replace": false,
+	"values": [
+		"lostlegends:acacia_beehive",
+		"lostlegends:bamboo_beehive",
+		"lostlegends:birch_beehive",
+		"lostlegends:cherry_beehive",
+		"lostlegends:crimson_beehive",
+		"lostlegends:dark_oak_beehive",
+		"lostlegends:jungle_beehive",
+		"lostlegends:mangrove_beehive",
+		"lostlegends:spruce_beehive",
+		"lostlegends:warped_beehive"
+	]
+}

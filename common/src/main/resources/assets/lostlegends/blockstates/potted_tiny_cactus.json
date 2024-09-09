@@ -1,0 +1,8 @@
+{
+    "variants": {
+		"": [
+            { "model": "lostlegends:block/potted_tiny_cactus" },
+			{ "model": "lostlegends:block/potted_tiny_cactus_alt" }
+        ]
+    }
+}
