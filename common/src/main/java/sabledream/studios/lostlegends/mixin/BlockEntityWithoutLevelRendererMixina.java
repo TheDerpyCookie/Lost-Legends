@@ -22,7 +22,7 @@ import sabledream.studios.lostlegends.block.RainbowBedBlock;
 import sabledream.studios.lostlegends.init.LostLegendsBlockEntity;
 
 @Mixin(BuiltinModelItemRenderer.class)
-public class BlockEntityWithoutLevelRendererMixin
+public class BlockEntityWithoutLevelRendererMixina
 {
 	@Shadow
 	@Final
