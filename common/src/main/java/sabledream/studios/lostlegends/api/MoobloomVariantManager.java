@@ -62,7 +62,7 @@ public final class MoobloomVariantManager extends JsonDataLoader
 					parsedMoobloomVariants.add(new MoobloomVariant(name, flowerBlock, biomesValue));
 				}
 			} catch (Exception e) {
-				LostLegends.getLogger().error("Friends&Foes Error: Couldn't parse moobloom variant {}", fileIdentifier, e);
+				LostLegends.getLogger().error("LostLegends Error: Couldn't parse moobloom variant {}", fileIdentifier, e);
 			}
 		});
 

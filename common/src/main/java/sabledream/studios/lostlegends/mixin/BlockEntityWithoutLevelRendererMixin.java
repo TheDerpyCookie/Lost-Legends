@@ -29,7 +29,7 @@ public class BlockEntityWithoutLevelRendererMixin
 	private BlockEntityRenderDispatcher blockEntityRenderDispatcher;
 
 	@Inject(at = @At("HEAD"), method = "render", cancellable = true)
-	private void Friendsandfoes_RenderRainbowBed(ItemStack stack, ModelTransformationMode mode, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, CallbackInfo ci) {
+	private void lostlegends_RenderRainbowBed(ItemStack stack, ModelTransformationMode mode, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, CallbackInfo ci) {
 		Item item = stack.getItem();
 		if (item instanceof BlockItem blockItem) {
 			Block block = blockItem.getBlock();
