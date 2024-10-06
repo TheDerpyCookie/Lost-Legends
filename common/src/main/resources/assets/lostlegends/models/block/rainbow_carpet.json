@@ -1,0 +1,12 @@
+{
+    "parent": "lostlegends:block/multi_texture_carpet",
+    "textures": {
+        "particle": "lostlegends:block/rainbow_wool_b",
+        "down": "lostlegends:block/rainbow_wool_b",
+        "up": "lostlegends:block/rainbow_wool_b",
+        "north": "lostlegends:block/rainbow_wool_c",
+        "south": "lostlegends:block/rainbow_wool_d",
+        "west": "lostlegends:block/rainbow_wool_e",
+        "east": "lostlegends:block/rainbow_wool_f"
+    }
+}

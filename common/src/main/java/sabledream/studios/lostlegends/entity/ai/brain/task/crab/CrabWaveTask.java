@@ -1,17 +1,17 @@
 package sabledream.studios.lostlegends.entity.ai.brain.task.crab;
 
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.brain.MemoryModuleState;
+import net.minecraft.entity.ai.brain.MemoryModuleType;
+import net.minecraft.entity.ai.brain.task.LookTargetUtil;
 import net.minecraft.entity.ai.brain.task.MultiTickTask;
+import net.minecraft.server.world.ServerWorld;
 import sabledream.studios.lostlegends.client.render.entity.animation.CrabAnimations;
 import sabledream.studios.lostlegends.entity.CrabEntity;
 import sabledream.studios.lostlegends.entity.ai.brain.CrabBrain;
 import sabledream.studios.lostlegends.entity.pose.CrabEntityPose;
 import sabledream.studios.lostlegends.init.LostLegendsMemoryModuleTypes;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.brain.MemoryModuleState;
-import net.minecraft.entity.ai.brain.MemoryModuleType;
-import net.minecraft.entity.ai.brain.task.LookTargetUtil;
-import net.minecraft.entity.ai.brain.task.Task;
-import net.minecraft.server.world.ServerWorld;
+import sabledream.studios.lostlegends.util.MovementUtil;
 
 import java.util.Map;
 
@@ -55,18 +55,7 @@ public final class CrabWaveTask extends MultiTickTask<CrabEntity>
 
 	@Override
 	protected void run(ServerWorld world, CrabEntity crab, long time) {
-		crab.getBrain().forget(MemoryModuleType.WALK_TARGET);
-		crab.getNavigation().setSpeed(0);
-		crab.getNavigation().stop();
-		crab.getNavigation().tick();
-		crab.getMoveControl().tick();
-
-		crab.setMovementSpeed(0.0F);
-		crab.prevHorizontalSpeed = 0.0F;
-		crab.horizontalSpeed = 0.0F;
-		crab.sidewaysSpeed = 0.0F;
-		crab.upwardSpeed = 0.0F;
-
+		MovementUtil.stopMovement(crab);
 		LookTargetUtil.lookAt(crab, this.nearestTarget);
 		crab.getLookControl().lookAt(this.nearestTarget);
 		crab.getLookControl().tick();
@@ -74,16 +63,11 @@ public final class CrabWaveTask extends MultiTickTask<CrabEntity>
 		this.waveTicks = 0;
 		this.maxWaveTicks = WAVE_DURATION;
 		crab.startWaveAnimation();
-
 	}
 
 	@Override
 	protected boolean shouldKeepRunning(ServerWorld world, CrabEntity crab, long time) {
-		if (this.waveTicks > this.maxWaveTicks) {
-			return false;
-		}
-
-		return true;
+		return this.waveTicks <= this.maxWaveTicks;
 	}
 
 	protected void keepRunning(ServerWorld world, CrabEntity crab, long time) {
@@ -92,7 +76,7 @@ public final class CrabWaveTask extends MultiTickTask<CrabEntity>
 
 	@Override
 	protected void finishRunning(ServerWorld world, CrabEntity crab, long time) {
-		crab.setPose(CrabEntityPose.IDLE.get());
+		crab.setPose(CrabEntityPose.IDLE);
 		CrabBrain.setWaveCooldown(crab);
 	}
 }

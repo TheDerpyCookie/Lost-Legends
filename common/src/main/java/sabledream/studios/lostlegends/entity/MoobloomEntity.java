@@ -1,5 +1,7 @@
 package sabledream.studios.lostlegends.entity;
 
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.passive.BeeEntity;
 import sabledream.studios.lostlegends.LostLegends;
 import sabledream.studios.lostlegends.api.MoobloomVariant;
 import sabledream.studios.lostlegends.api.MoobloomVariantManager;
@@ -36,6 +38,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 public class MoobloomEntity extends CowEntity implements Shearable
 {
 	public static final String VARIANT_NBT_NAME = "Variant";
@@ -58,6 +62,26 @@ public class MoobloomEntity extends CowEntity implements Shearable
 		Random random
 	) {
 		return serverWorldAccess.getBlockState(blockPos.down()).isOf(Blocks.GRASS_BLOCK) && isLightLevelValidForNaturalSpawn(serverWorldAccess, blockPos);
+	}
+
+	@Override
+	public boolean damage(DamageSource source, float amount) {
+		if (super.damage(source, amount)) {
+			if (source.getAttacker() instanceof PlayerEntity){
+				PlayerEntity player = (PlayerEntity) source.getAttacker();
+
+				List<BeeEntity> nearbyBees = this.getWorld().getEntitiesByClass(BeeEntity.class,
+					this.getBoundingBox().expand(10.0D),
+					bee -> bee != null && bee.isAlive());
+
+				for (BeeEntity bee : nearbyBees) {
+					bee.setAngerTime(400);
+					bee.setTarget(player);
+				}
+			}
+			return true;
+		}
+		return false;
 	}
 
 	@Override

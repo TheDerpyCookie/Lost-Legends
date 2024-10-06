@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "particle": "lostlegends:block/rainbow_wool_b",
+        "up": "lostlegends:block/rainbow_wool_b",
+        "down": "lostlegends:block/rainbow_wool_b",
+        "south": "lostlegends:block/rainbow_wool_d",
+        "north": "lostlegends:block/rainbow_wool_c",
+        "west": "lostlegends:block/rainbow_wool_e",
+        "east": "lostlegends:block/rainbow_wool_f"
+    }
+}

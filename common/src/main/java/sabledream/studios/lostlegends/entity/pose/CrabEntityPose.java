@@ -8,7 +8,7 @@ public enum CrabEntityPose
 {
 	IDLE,
 	WAVE,
-	RAVE;
+	DANCE;
 
 	public String getName() {
 		return "CRAB_" + this.name();

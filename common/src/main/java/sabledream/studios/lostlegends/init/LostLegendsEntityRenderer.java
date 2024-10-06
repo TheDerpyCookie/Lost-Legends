@@ -3,6 +3,7 @@ package sabledream.studios.lostlegends.init;
 import sabledream.studios.lostlegends.client.render.entity.renderer.SkeletonWolfRenderer;
 import sabledream.studios.lostlegends.client.render.entity.renderer.*;
 import sabledream.studios.lostlegends.entity.PlayerIllusionEntity;
+import sabledream.studios.lostlegends.entity.projectile.E2JThrowableItemProjectile;
 import sabledream.studios.lostlegends.platform.RegistryHelper;
 import com.google.common.collect.ImmutableMap;
 import net.fabricmc.api.EnvType;
@@ -55,6 +56,9 @@ public final class LostLegendsEntityRenderer
 		RegistryHelper.registerEntityRenderer(LostLegendsEntityTypes.VILER_WITCH, VilerWitchRenderer::new);
 		RegistryHelper.registerEntityRenderer(LostLegendsEntityTypes.MUDDY_PIG, MuddyPigRenderer::new);
 		RegistryHelper.registerEntityRenderer(LostLegendsEntityTypes.OSTRICH, OstrichRender::new);
+		RegistryHelper.registerEntityRenderer(LostLegendsEntityTypes.FIREFLY, FireflyEntityRenderer::new);
+		RegistryHelper.registerEntityRenderer(LostLegendsEntityTypes.TUMBLEWEED, TumbleweedRenderer::new);
+		RegistryHelper.registerEntityRenderer(LostLegendsEntityTypes.CUSTOM_SNOWBALL_ENTITY, ThrownItemRenderer::new);
 	}
 
 	public static Map<SkinTextures.Model, EntityRenderer<? extends PlayerIllusionEntity>> reloadPlayerIllusionRenderers(

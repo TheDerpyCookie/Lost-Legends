@@ -13,6 +13,7 @@ import java.util.function.Supplier;
  */
 public final class LostLegendsMemoryModuleTypes
 {
+	public static final Supplier<MemoryModuleType<Boolean>> CRAB_IS_DANCING;
 	public static final Supplier<MemoryModuleType<GlobalPos>> CRAB_BURROW_POS;
 	public static final Supplier<MemoryModuleType<Boolean>> CRAB_HAS_EGG;
 	public static final Supplier<MemoryModuleType<Integer>> CRAB_WAVE_COOLDOWN;
@@ -31,7 +32,6 @@ public final class LostLegendsMemoryModuleTypes
 	public final static Supplier<MemoryModuleType<Integer>> WILDFIRE_SUMMON_BLAZE_COOLDOWN;
 	public final static Supplier<MemoryModuleType<Integer>> TUFF_GOLEM_SLEEP_COOLDOWN;
 	public final static Supplier<MemoryModuleType<Integer>> RASCAL_NOD_COOLDOWN;
-
 	static {
 		COPPER_GOLEM_IS_OXIDIZED = RegistryHelper.registerMemoryModuleType("copper_golem_is_oxidized", () -> new MemoryModuleType<>(Optional.of(Codec.BOOL)));
 		COPPER_GOLEM_BUTTON_POS = RegistryHelper.registerMemoryModuleType("copper_golem_button_pos", () -> new MemoryModuleType<>(Optional.of(GlobalPos.CODEC)));
@@ -51,6 +51,7 @@ public final class LostLegendsMemoryModuleTypes
 		CRAB_BURROW_POS = RegistryHelper.registerMemoryModuleType("crab_burrow_pos", () -> new MemoryModuleType<>(Optional.of(GlobalPos.CODEC)));
 		CRAB_WAVE_COOLDOWN =RegistryHelper.registerMemoryModuleType("crab_wave_cooldown", () -> new MemoryModuleType<>(Optional.of(Codec.INT)));
 		CRAB_HAS_EGG = RegistryHelper.registerMemoryModuleType("crab_has_egg", () -> new MemoryModuleType<>(Optional.of(Codec.BOOL)));
+		CRAB_IS_DANCING = RegistryHelper.registerMemoryModuleType("crab_is_dancing", () -> new MemoryModuleType<>(Optional.of(Codec.BOOL)));
 	}
 
 	public static void init() {

@@ -2,16 +2,20 @@ package sabledream.studios.lostlegends.init;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.client.render.entity.EntityRendererFactory;
+import net.minecraft.client.render.entity.WitherEntityRenderer;
 import net.minecraft.client.render.entity.model.CowEntityModel;
 import net.minecraft.entity.*;
+import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.mob.BlazeEntity;
 import net.minecraft.entity.mob.WitchEntity;
 import net.minecraft.entity.projectile.SmallFireballEntity;
 import org.apache.http.client.entity.EntityBuilder;
 import sabledream.studios.lostlegends.LostLegends;
 import sabledream.studios.lostlegends.client.render.entity.renderer.BarnacleEntityRenderer;
+import sabledream.studios.lostlegends.client.render.entity.renderer.BarnacleRenderer;
 import sabledream.studios.lostlegends.client.render.entity.renderer.WildfireEntityRenderer;
 import sabledream.studios.lostlegends.entity.*;
+import sabledream.studios.lostlegends.entity.projectile.CustomSnowballEntity;
 import sabledream.studios.lostlegends.entity.projectile.MelonSeedProjectileEntity;
 import sabledream.studios.lostlegends.events.lifecycle.AddSpawnBiomeModificationsEvent;
 import sabledream.studios.lostlegends.mixin.SpawnRestrictionAccessor;
@@ -29,7 +33,7 @@ import java.util.function.Supplier;
 public final class LostLegendsEntityTypes
 {
 	public static boolean previousUseChoiceTypeRegistrations = SharedConstants.useChoiceTypeRegistrations;
-
+	public static final Supplier<EntityType<TumbleweedEntity>> TUMBLEWEED;
 	public static final Supplier<EntityType<CopperGolemEntity>> COPPER_GOLEM;
 	public static final Supplier<EntityType<GlareEntity>> GLARE;
 	public static final Supplier<EntityType<IceologerEntity>> ICEOLOGER;
@@ -52,18 +56,21 @@ public final class LostLegendsEntityTypes
 	public static final Supplier<EntityType<MoobloomCactusEntity>> MOOBLOOM_CATUS;
 	public static final Supplier<EntityType<BambmooEntity>> BAMBMOO;
 	public static final Supplier<EntityType<VilerWitchEntity>> VILER_WITCH;
-
 	public static final Supplier<EntityType<MelonSeedProjectileEntity>> MELON_SEED_PROJECTILE;
 	public static final Supplier<EntityType<MelonGolemEntity>> MELON_GOLEM;
 	public static final Supplier<EntityType<FurnaceGolemEntity>> FURNACE_GOLEM;
-
 	public static final Supplier<EntityType<SkeletonWolfEntity>> SKELETON_WOLF;
 	public static final Supplier<EntityType<MuddyPigEntity>> MUDDY_PIG;
-
 	public static final Supplier<EntityType<Ostrich>> OSTRICH;
+	public static final Supplier<EntityType<FireflyEntity>> FIREFLY;
+	public static final Supplier<EntityType<CustomSnowballEntity>> CUSTOM_SNOWBALL_ENTITY;
+
 
 	static {
 		SharedConstants.useChoiceTypeRegistrations = false;
+		CUSTOM_SNOWBALL_ENTITY = RegistryHelper.registerEntityType("custom_snowball", () -> EntityType.Builder.<CustomSnowballEntity>create(CustomSnowballEntity::new, SpawnGroup.MISC).dimensions(0.25F, 0.25F).maxTrackingRange(4).build(LostLegends.makeStringID("custom_snowball")));
+		TUMBLEWEED = RegistryHelper.registerEntityType("tumbleweed", () -> EntityType.Builder.create(TumbleweedEntity::new, SpawnGroup.MISC).dimensions(0.98F, 0.98F).build(LostLegends.makeStringID("tumbleweed")));
+		FIREFLY = RegistryHelper.registerEntityType("firefly", () -> EntityType.Builder.create(FireflyEntity::new, SpawnGroup.CREATURE).dimensions(0.2F,0.2F).maxTrackingRange(8).build(LostLegends.makeStringID("firefly")));
 		COPPER_GOLEM = RegistryHelper.registerEntityType("copper_golem", () -> EntityType.Builder.create(CopperGolemEntity::new, SpawnGroup.MISC).dimensions(0.75F, 1.375F).maxTrackingRange(10).build(LostLegends.makeStringID("copper_golem")));
 		GLARE = RegistryHelper.registerEntityType("glare", () -> EntityType.Builder.create(GlareEntity::new, CustomSpawnGroup.getGlaresCategory()).dimensions(0.875F, 1.1875F).maxTrackingRange(8).trackingTickInterval(2).build(LostLegends.makeStringID("glare")));
 		ICEOLOGER = RegistryHelper.registerEntityType("iceologer", () -> EntityType.Builder.create(IceologerEntity::new, SpawnGroup.MONSTER).dimensions(0.6F, 1.95F).maxTrackingRange(10).build(LostLegends.makeStringID("iceologer")));
@@ -131,6 +138,8 @@ public final class LostLegendsEntityTypes
 		RegistryHelper.registerEntityAttribute(LostLegendsEntityTypes.VILER_WITCH, WitchEntity::createWitchAttributes);
 		RegistryHelper.registerEntityAttribute(LostLegendsEntityTypes.MUDDY_PIG, E2JBasePigEntity::createPigAttributes);
 		RegistryHelper.registerEntityAttribute(LostLegendsEntityTypes.OSTRICH, Ostrich::createOstrichAttributes);
+		RegistryHelper.registerEntityAttribute(LostLegendsEntityTypes.FIREFLY, FireflyEntity::createFireflyAttributes);
+		RegistryHelper.registerEntityAttribute(LostLegendsEntityTypes.TUMBLEWEED, TumbleweedEntity::createAttributes);
 	}
 
 	public static void initSpawnRestrictions() {
@@ -144,7 +153,7 @@ public final class LostLegendsEntityTypes
 		SpawnRestrictionAccessor.callRegister(BARNACLE.get(), SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, BarnacleEntity::canSpawn);
 
 	}
-
+	
 	public static void addSpawnBiomeModifications(AddSpawnBiomeModificationsEvent event) {
 		var config = LostLegends.getConfig();
 		if (config.enableBarnacle && config.enableBarnacleSpawn) {

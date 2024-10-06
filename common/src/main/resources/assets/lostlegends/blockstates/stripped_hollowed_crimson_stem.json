@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "lostlegends:block/stripped_hollowed_crimson_stem",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "lostlegends:block/stripped_hollowed_crimson_stem"
+    },
+    "axis=z": {
+      "model": "lostlegends:block/stripped_hollowed_crimson_stem",
+      "x": 90
+    }
+  }
+}

@@ -1,6 +1,9 @@
 package sabledream.studios.lostlegends.mixin;
 
+import org.spongepowered.asm.mixin.Unique;
 import sabledream.studios.lostlegends.LostLegends;
+import sabledream.studios.lostlegends.api.wind.WindManager;
+import sabledream.studios.lostlegends.api.wind.WindManagerInterface;
 import sabledream.studios.lostlegends.entity.ZombieHorseEntityAccess;
 import sabledream.studios.lostlegends.tag.LostLegendsTags;
 import net.minecraft.entity.EntityType;
@@ -29,7 +32,7 @@ import java.util.Optional;
 import java.util.function.Supplier;
 
 @Mixin(ServerWorld.class)
-public abstract class ServerWorldMixin extends World implements StructureWorldAccess
+public abstract class ServerWorldMixin extends World implements StructureWorldAccess, WindManagerInterface
 {
 	protected ServerWorldMixin(
 		MutableWorldProperties properties,
@@ -112,4 +115,14 @@ public abstract class ServerWorldMixin extends World implements StructureWorldAc
 			}
 		}
 	}
+	@Unique
+	private final WindManager LostLegends$getWindManager = new WindManager(ServerWorld.class.cast(this));
+
+
+	@Unique
+	@Override
+	public WindManager LostLegends$getWindManager(){
+		return this.LostLegends$getWindManager;
+	}
+
 }

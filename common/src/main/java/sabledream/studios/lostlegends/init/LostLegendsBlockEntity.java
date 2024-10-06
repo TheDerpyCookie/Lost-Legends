@@ -7,6 +7,7 @@ import net.minecraft.registry.Registries;
 import sabledream.studios.lostlegends.LostLegends;
 import sabledream.studios.lostlegends.block.entity.BurrowBlockEntity;
 import sabledream.studios.lostlegends.block.entity.RainbowBedBlockEntity;
+import sabledream.studios.lostlegends.block.entity.TermiteMoundBlockEntity;
 import sabledream.studios.lostlegends.events.DeferredRegistry;
 import sabledream.studios.lostlegends.events.RegistrySupplier;
 
@@ -20,5 +21,6 @@ public class LostLegendsBlockEntity
 	}
 	public static final RegistrySupplier<BlockEntityType<BurrowBlockEntity>>  BURROW = TILES.register("burrow", () -> registerTiles(BurrowBlockEntity::new, LostLegendsBlocks.BURROW.get()));
 	public static final RegistrySupplier<BlockEntityType<RainbowBedBlockEntity>> RAINBOW_BED = TILES.register("rainbow_bed", () -> registerTiles(RainbowBedBlockEntity::new, LostLegendsBlocks.RAINBOW_BED.get()));
+	public static final RegistrySupplier<BlockEntityType<TermiteMoundBlockEntity>>  TERMITE_MOUND = TILES.register("termite_mound", () -> registerTiles(TermiteMoundBlockEntity::new, LostLegendsBlocks.TERMITE_MOUND.get()));
 
 }

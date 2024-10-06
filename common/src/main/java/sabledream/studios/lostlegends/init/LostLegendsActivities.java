@@ -18,6 +18,7 @@ public final class LostLegendsActivities
 	public final static Supplier<Activity> RASCAL_WAIT;
 	public final static Supplier<Activity> CRAB_WAVE;
 	public final static Supplier<Activity> CRAB_LAY_EGG;
+	public final static Supplier<Activity> CRAB_DANCE;
 
 
 
@@ -30,6 +31,7 @@ public final class LostLegendsActivities
 		RASCAL_WAIT = RegistryHelper.registerActivity("rascal_wait", () -> new Activity("rascal_wait"));
 		CRAB_WAVE = RegistryHelper.registerActivity("crab_wave", () -> new Activity("crab_wave"));
 		CRAB_LAY_EGG = RegistryHelper.registerActivity("crab_lay_egg", () -> new Activity("crab_lay_egg"));
+		CRAB_DANCE = RegistryHelper.registerActivity("crab_dance", ()-> new Activity("crab_dance"));
 	}
 
 	public static void init() {

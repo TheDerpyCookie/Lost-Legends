@@ -1,5 +1,11 @@
 package sabledream.studios.lostlegends.platform.fabric;
 
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.network.PacketByteBuf;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.poi.PointOfInterestTypes;
 import sabledream.studios.lostlegends.LostLegends;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
@@ -39,12 +45,18 @@ import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.gen.structure.Structure;
 import net.minecraft.world.gen.structure.StructureType;
 import net.minecraft.world.poi.PointOfInterestType;
+import sabledream.studios.lostlegends.fabric.IFabricMenuType;
+import sabledream.studios.lostlegends.misc.RegSupplier;
+import sabledream.studios.lostlegends.misc.TriFunction;
 
+import java.util.LinkedHashMap;
 import java.util.function.Supplier;
 
 @SuppressWarnings({"unsafe", "unchecked"})
 public final class RegistryHelperImpl
 {
+
+
 	public static void addToItemGroupBefore(RegistryKey<ItemGroup> itemGroup, Item item, Item before) {
 		ItemGroupEvents.modifyEntriesEvent(itemGroup).register((content) -> {
 			content.addBefore(before, item.getDefaultStack());
@@ -56,11 +68,13 @@ public final class RegistryHelperImpl
 			content.addAfter(after, item.getDefaultStack());
 		});
 	}
-
 	public static <T extends Activity> Supplier<T> registerActivity(String name, Supplier<T> activity) {
 		var registry = Registry.register(Registries.ACTIVITY, LostLegends.makeID(name), activity.get());
 		return () -> registry;
 	}
+
+
+
 
 	public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
 		var registry = Registry.register(Registries.BLOCK, LostLegends.makeID(name), block.get());

@@ -16,7 +16,6 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import sabledream.studios.lostlegends.entity.Ostrich;
 import sabledream.studios.lostlegends.init.LostLegendsEntityTypes;
-import sabledream.studios.lostlegends.util.RandomSource;
 
 import java.util.List;
 import java.util.Random;

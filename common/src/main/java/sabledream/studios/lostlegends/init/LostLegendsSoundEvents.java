@@ -13,6 +13,28 @@ import java.util.function.Supplier;
  */
 public final class LostLegendsSoundEvents
 {
+	public static final Supplier<SoundEvent> BLOCK_TERMITE_MOUND_TERMITE_GNAW;
+	public static final Supplier<SoundEvent> BLOCK_TERMITE_MOUND_TERMITE_IDLE;
+	public static final Supplier<SoundEvent> BLOCK_TERMITE_MOUND_BREAK;
+	public static final Supplier<SoundEvent> BLOCK_TERMITE_MOUND_STEP;
+	public static final Supplier<SoundEvent> BLOCK_TERMITE_MOUND_PLACE;
+	public static final Supplier<SoundEvent> BLOCK_TERMITE_MOUND_HIT;
+	public static final Supplier<SoundEvent> BLOCK_TERMITE_MOUND_FALL;
+	public static final Supplier<SoundEvent> BLOCK_TERMITE_MOUND_ENTER;
+	public static final Supplier<SoundEvent> BLOCK_TERMITE_MOUND_EXIT;
+	public static final Supplier<SoundEvent>  BLOCK_TERMITE_MOUND_TERMITE_GNAW_FINISH;
+
+	public static final Supplier<SoundEvent>  LOG_HOLLOWED;
+	public static final Supplier<SoundEvent>  STEM_HOLLOWED;
+
+	public static final Supplier<SoundEvent> SAWMILL_TAKE;
+	public static final Supplier<SoundEvent> SAWMILL_SELECT;
+
+
+
+
+
+
 	public static final Supplier<SoundEvent> ENTITY_BARNACLE_AMBIENT;
 	public static final Supplier<SoundEvent> ENTITY_BARNACLE_HURT;
 	public static final Supplier<SoundEvent> ENTITY_COPPER_GOLEM_DEATH;
@@ -92,8 +114,37 @@ public final class LostLegendsSoundEvents
 	public static final Supplier<SoundEvent> RAINBOW_SHEEP_AMBIENT;
 	public static final Supplier<SoundEvent> RAINBOW_SHEEP_DEATH;
 
+	public static final Supplier<SoundEvent> FIREFLY_DEATH;
+	public static final Supplier<SoundEvent> FIREFLY_AMBIENT;
+
+	public static final Supplier<SoundEvent> ENTITY_TUMBLEWEED_BOUNCE;
+	public static final Supplier<SoundEvent> ENTITY_TUMBLEWEED_BREAK;
+	public static final Supplier<SoundEvent> ENTITY_TUMBLEWEED_DAMAGE;
+	public static final Supplier<SoundEvent> BLOCK_TUMBLEWEED_SHEAR;
+
+	public static final Supplier<SoundEvent> BLOCK_TUMBLEWEED_PLANT_BREAK;
+	public static final Supplier<SoundEvent> BLOCK_TUMBLEWEED_PLANT_STEP;
+	public static final Supplier<SoundEvent> BLOCK_TUMBLEWEED_PLANT_PLACE;
+	public static final Supplier<SoundEvent> BLOCK_TUMBLEWEED_PLANT_HIT;
+	public static final Supplier<SoundEvent> BLOCK_TUMBLEWEED_PLANT_FALL;
 
 	static {
+		SAWMILL_TAKE = register("ui", "sawmill.take_result");
+		SAWMILL_SELECT = register("ui", "sawmill.select_recipe");
+		LOG_HOLLOWED = register("block", "log_hollowed");
+		STEM_HOLLOWED = register("block", "stem_hollowed");
+		BLOCK_TUMBLEWEED_PLANT_BREAK = register("block", "tumbleweed_plant.break");
+		BLOCK_TUMBLEWEED_PLANT_STEP = register("block", "tumbleweed_plant.step");
+		BLOCK_TUMBLEWEED_PLANT_PLACE = register("block", "tumbleweed_plant.place");
+		BLOCK_TUMBLEWEED_PLANT_HIT = register("block", "tumbleweed_plant.hit");
+		BLOCK_TUMBLEWEED_PLANT_FALL = register("block", "tumbleweed_plant.fall");
+
+		ENTITY_TUMBLEWEED_BOUNCE = register("entity", "tumbleweed.bounce");
+		ENTITY_TUMBLEWEED_BREAK = register("entity", "tumbleweed.break");
+		ENTITY_TUMBLEWEED_DAMAGE = register("entity", "tumbleweed.damage");
+		BLOCK_TUMBLEWEED_SHEAR = register("block", "tumbleweed.shear");
+		FIREFLY_DEATH = register("entity", "firefly.death");
+		FIREFLY_AMBIENT = register("entity", "firefly.ambient");
 		ENTITY_COPPER_GOLEM_DEATH = register("entity", "copper_golem.death");
 		ENTITY_COPPER_GOLEM_HEAD_SPIN = register("entity", "copper_golem.head_spin");
 		ENTITY_COPPER_GOLEM_HURT = register("entity", "copper_golem.hurt");
@@ -172,6 +223,18 @@ public final class LostLegendsSoundEvents
 
 		RAINBOW_SHEEP_AMBIENT = register("entity", "rainbow_sheep.ambient");
 		RAINBOW_SHEEP_DEATH = register("entity", "rainbow_sheep.death");
+
+
+		BLOCK_TERMITE_MOUND_TERMITE_IDLE = register("block", "termite_mound.termite_idle");
+		BLOCK_TERMITE_MOUND_TERMITE_GNAW = register("block","termite_mound.termite_gnaw");
+		BLOCK_TERMITE_MOUND_BREAK = register("block", "termite_mound.break");
+		BLOCK_TERMITE_MOUND_STEP = register("block", "termite_mound.step");
+		BLOCK_TERMITE_MOUND_PLACE = register("block", "termite_mound.place");
+		BLOCK_TERMITE_MOUND_HIT = register("block", "termite_mound.hit");
+		BLOCK_TERMITE_MOUND_FALL = register("block", "termite_mound.fall");
+		BLOCK_TERMITE_MOUND_ENTER = register("block", "termite_mound.enter");
+		BLOCK_TERMITE_MOUND_EXIT = register("block", "termite_mound.exit");
+		BLOCK_TERMITE_MOUND_TERMITE_GNAW_FINISH = register("block", "termite_mound.termite_gnaw_finish");
 	}
 
 

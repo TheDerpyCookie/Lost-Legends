@@ -1,4 +1,29 @@
 {
+	"entity.firefly_catch": {
+		"sounds": [
+			"lostlegends:entity/firefly/firefly_catch"
+		]
+	},
+
+	"entity.firefly_ambient": {
+		"sounds": [
+			"lostlegends:entity/firefly/firefly_fly1",
+			"lostlegends:entity/firefly/firefly_fly2",
+			"lostlegends:entity/firefly/firefly_fly3",
+			"lostlegends:entity/firefly/firefly_fly4"
+		]
+	},
+	"entity.firefly_release": {
+		"sounds": [
+			"lostlegends:entity/firefly/firefly_release"
+		]
+	},
+	"entity.firefly_death": {
+		"sounds": [
+			"lostlegends:entity/firefly/firefly_death"
+		]
+	},
+
 	"entity.skeleton_wolf.ambient": {
 		"sounds": [
 			"lostlegends:entity/skeleton_wolf/bark1",

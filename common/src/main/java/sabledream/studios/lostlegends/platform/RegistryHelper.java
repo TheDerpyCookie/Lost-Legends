@@ -1,19 +1,17 @@
 package sabledream.studios.lostlegends.platform;
 
-import com.mojang.datafixers.types.Type;
+import com.google.common.base.Suppliers;
 import dev.architectury.injectables.annotations.ExpectPlatform;
+import dev.architectury.registry.registries.Registrar;
+import dev.architectury.registry.registries.RegistrarManager;
 import net.minecraft.advancement.criterion.Criterion;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSetType;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.model.TexturedModelData;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
-import net.minecraft.datafixer.TypeReferences;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -22,34 +20,78 @@ import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.ai.brain.sensor.SensorType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.particle.SimpleParticleType;
-import net.minecraft.registry.Registries;
+import net.minecraft.recipe.Recipe;
+import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.structure.processor.StructureProcessor;
 import net.minecraft.structure.processor.StructureProcessorType;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.gen.structure.Structure;
 import net.minecraft.world.gen.structure.StructureType;
 import net.minecraft.world.poi.PointOfInterestType;
-import sabledream.studios.lostlegends.LostLegends;
+import sabledream.studios.lostlegends.events.RegistrySupplier;
+import sabledream.studios.lostlegends.misc.RegSupplier;
+import sabledream.studios.lostlegends.misc.TriFunction;
+import sabledream.studios.lostlegends.network.Packet;
 
 import java.util.function.Supplier;
+
+import static sabledream.studios.lostlegends.LostLegends.MOD_ID;
 
 public final class RegistryHelper
 {
 	@ExpectPlatform
-	public static void addToItemGroupBefore(RegistryKey<ItemGroup> itemGroup, Item item, Item before) {
+	public static <T, E extends T> RegSupplier<E> register(
+		Identifier name, Supplier<E> supplier, RegistryKey<? extends Registry<T>> regKey) {
 		throw new AssertionError();
 	}
 
+	@ExpectPlatform
+	public static <C extends ScreenHandler> RegSupplier<ScreenHandlerType<C>> registerMenuType(
+		Identifier name,
+		TriFunction<Integer, PlayerInventory, PacketByteBuf, C> containerFactory) {
+		throw new AssertionError();
+	}
+
+
+	public static <T extends RecipeSerializer<?>> RegSupplier<T> registerRecipeSerializer(Identifier name, Supplier<T> recipe) {
+		return register(name, recipe, RegistryKeys.RECIPE_SERIALIZER);
+	}
+
+
+	public static <T extends Recipe<?>> Supplier<RecipeType<T>> registerRecipeType(Identifier name) {
+		return RegistryHelper.register(name, () -> {
+			String id = name.toString();
+			return new RecipeType<T>() {
+				@Override
+				public String toString() {
+					return id;
+				}
+			};
+		}, RegistryKeys.RECIPE_TYPE);
+	}
+
+
+
+	@ExpectPlatform
+	public static void addToItemGroupBefore(RegistryKey<ItemGroup> itemGroup, Item item, Item before) {
+		throw new AssertionError();
+	}
 	@ExpectPlatform
 	public static void addToItemGroupAfter(RegistryKey<ItemGroup> itemGroup, Item item, Item after) {
 		throw new AssertionError();

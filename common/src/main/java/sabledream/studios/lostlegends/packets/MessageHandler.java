@@ -1,6 +1,7 @@
 package sabledream.studios.lostlegends.packets;
 
 import sabledream.studios.lostlegends.LostLegends;
+import sabledream.studios.lostlegends.api.wind.WindDisturbancePacket;
 import sabledream.studios.lostlegends.network.Network;
 
 /**

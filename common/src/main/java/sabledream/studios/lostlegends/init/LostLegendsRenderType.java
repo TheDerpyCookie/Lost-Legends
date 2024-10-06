@@ -15,6 +15,9 @@ public final class LostLegendsRenderType
 		RegistryHelper.registerRenderType(RenderLayer.getCutout(), LostLegendsBlocks.POTTED_PINKDAISY.get());
 		RegistryHelper.registerRenderType(RenderLayer.getCutout(), LostLegendsBlocks.TINYCACTUS.get());
 		RegistryHelper.registerRenderType(RenderLayer.getCutout(), LostLegendsBlocks.POTTED_TINYCACTUS.get());
+		RegistryHelper.registerRenderType(RenderLayer.getCutout(), LostLegendsBlocks.TUMBLEWEED_PLANT.get());
+		RegistryHelper.registerRenderType(RenderLayer.getCutout(), LostLegendsBlocks.POTTED_TUMBLEWEED_PLANT.get());
+		RegistryHelper.registerRenderType(RenderLayer.getCutout(), LostLegendsBlocks.TUMBLEWEED.get());
 	}
 
 	private LostLegendsRenderType() {

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "lostlegends:block/termite_mound_top",
+    "particle": "lostlegends:block/termite_mound",
+    "side": "lostlegends:block/termite_mound",
+    "top": "lostlegends:block/termite_mound_top"
+  }
+}

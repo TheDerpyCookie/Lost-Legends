@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "termites_awake=false": {
+      "model": "lostlegends:block/termite_mound"
+    },
+    "termites_awake=true": {
+      "model": "lostlegends:block/termite_mound_termites"
+    }
+  }
+}

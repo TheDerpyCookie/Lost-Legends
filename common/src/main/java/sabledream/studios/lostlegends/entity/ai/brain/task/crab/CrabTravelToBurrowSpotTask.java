@@ -1,15 +1,14 @@
 package sabledream.studios.lostlegends.entity.ai.brain.task.crab;
 
-import net.minecraft.entity.ai.brain.task.MultiTickTask;
-import sabledream.studios.lostlegends.entity.CrabEntity;
-import sabledream.studios.lostlegends.init.LostLegendsMemoryModuleTypes;
 import net.minecraft.entity.ai.brain.MemoryModuleState;
 import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.ai.brain.task.LookTargetUtil;
-import net.minecraft.entity.ai.brain.task.Task;
+import net.minecraft.entity.ai.brain.task.MultiTickTask;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.GlobalPos;
+import sabledream.studios.lostlegends.entity.CrabEntity;
+import sabledream.studios.lostlegends.init.LostLegendsMemoryModuleTypes;
 
 import java.util.Map;
 

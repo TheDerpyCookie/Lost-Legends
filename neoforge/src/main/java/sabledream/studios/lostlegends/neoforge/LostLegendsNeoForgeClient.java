@@ -2,11 +2,12 @@ package sabledream.studios.lostlegends.neoforge;
 
 import sabledream.studios.lostlegends.LostLegends;
 import sabledream.studios.lostlegends.LostLegendsClient;
+import sabledream.studios.lostlegends.client.particle.FireflyParticle;
 import sabledream.studios.lostlegends.client.particle.FreezingTotemParticle;
 import sabledream.studios.lostlegends.client.particle.IllusionTotemParticle;
 import sabledream.studios.lostlegends.config.ConfigScreenBuilder;
+import sabledream.studios.lostlegends.events.lifecycle.ClientSetupEvent;
 import sabledream.studios.lostlegends.init.LostLegendsParticleTypes;
-import sabledream.studios.lostlegends.platform.neoforge.RegistryHelperImpl;
 import net.minecraft.client.model.TexturedModelData;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.neoforged.bus.api.IEventBus;
@@ -16,9 +17,11 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import sabledream.studios.lostlegends.platform.neoforge.RegistryHelperImpl;
 
 import java.util.Map;
 import java.util.function.Supplier;
+
 
 public final class LostLegendsNeoForgeClient
 {
@@ -30,7 +33,10 @@ public final class LostLegendsNeoForgeClient
 		modEventBus.addListener(LostLegendsNeoForgeClient::registerParticleFactory);
 	}
 
+
+
 	private static void onClientSetup(final FMLClientSetupEvent event) {
+		ClientSetupEvent.EVENT.invoke(new ClientSetupEvent(Runnable::run));
 		event.enqueueWork(() -> {
 			LostLegendsClient.postInit();
 
@@ -51,5 +57,6 @@ public final class LostLegendsNeoForgeClient
 	public static void registerParticleFactory(RegisterParticleProvidersEvent event) {
 		event.registerSpriteSet(LostLegendsParticleTypes.TOTEM_OF_FREEZING, FreezingTotemParticle.Factory::new);
 		event.registerSpriteSet(LostLegendsParticleTypes.TOTEM_OF_ILLUSION, IllusionTotemParticle.Factory::new);
+		event.registerSpriteSet(LostLegendsParticleTypes.FIREFLY_EMISSION, FireflyParticle.Factory::new);
 	}
 }

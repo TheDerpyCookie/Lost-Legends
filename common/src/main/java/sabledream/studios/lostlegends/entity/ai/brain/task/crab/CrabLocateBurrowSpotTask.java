@@ -1,16 +1,15 @@
 package sabledream.studios.lostlegends.entity.ai.brain.task.crab;
 
+import net.minecraft.entity.ai.brain.MemoryModuleState;
 import net.minecraft.entity.ai.brain.task.MultiTickTask;
 import net.minecraft.registry.RegistryKey;
-import sabledream.studios.lostlegends.entity.CrabEntity;
-import sabledream.studios.lostlegends.init.LostLegendsMemoryModuleTypes;
-import net.minecraft.entity.ai.brain.MemoryModuleState;
-import net.minecraft.entity.ai.brain.task.Task;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.GlobalPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import sabledream.studios.lostlegends.entity.CrabEntity;
+import sabledream.studios.lostlegends.init.LostLegendsMemoryModuleTypes;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -29,11 +28,7 @@ public final class CrabLocateBurrowSpotTask extends MultiTickTask<CrabEntity>
 		ServerWorld world,
 		CrabEntity crab
 	) {
-		if (!crab.isCloseToHomePos(6.0F)) {
-			return false;
-		}
-
-		return true;
+		return crab.isCloseToHomePos(6.0F);
 	}
 
 	@Override

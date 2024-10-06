@@ -43,18 +43,35 @@ public final class LostLegendsTags
 	public static final TagKey<Biome> HAS_PENGUIN = biomeTag("has_penguin");
 	public static final TagKey<EntityType<?>> BARNACLE_AVOID_TARGETS = entityTypeTag("barnacle_avoid_targets");
 	public static final TagKey<EntityType<?>> BARNACLE_PREY = entityTypeTag("barnacle_prey");
+	public static final TagKey<EntityType<?>> BARNACLE_ALWAYS_HOSTILES = entityTypeTag("barnacle_always_hostile");
 
 	public static final TagKey<Biome> HAS_CRAB = biomeTag("has_crab");
 	public static final TagKey<Biome> HAS_RASCAL = biomeTag("has_rascal");
 	public static final TagKey<Biome> HAS_SAVANNA_MAULER = biomeTag("has_savanna_mauler");
 
 	public static final TagKey<Block> BURROW = blockTag("burrow");
-	public static final TagKey<Item> ENDERITE_ITEM = itemTag("enderite_item");
-	public static final TagKey<Item> CRAFTABLE_SHULKER_BOXES = itemTag("shulker_boxes");
 
-	public static final TagKey<Item> ENDERITE_ELYTRA = itemTag("enderite_elytras");
 
-	public static final TagKey<Item> ENDERITE_ARMOR = itemTag("enderite_armor");
+	public static final TagKey<Item> TUMBLEWEED_COMMON = itemTag("tumbleweed_common");
+	public static final TagKey<Item> TUMBLEWEED_MEDIUM = itemTag("tumbleweed_medium");
+	public static final TagKey<Item> TUMBLEWEED_RARE = itemTag("tumbleweed_rare");
+	public static final TagKey<EntityType<?>> TUMBLEWEED_PASSES_THROUGH = entityTypeTag("tumbleweed_passes_through");
+	public static final TagKey<Block> STOPS_TUMBLEWEED = blockTag("stops_tumbleweed");
+	public static final TagKey<Block> BUSH_MAY_PLACE_ON = blockTag("bush_may_place_on");
+
+	public static final TagKey<Item> BLACKLIST = itemTag("blacklist");
+
+
+
+
+	//Termite Stuff
+	public static final TagKey<Block> KILLS_TERMITE = blockTag("kills_termite");
+	public static final TagKey<Block> TERMITE_BREAKABLE = blockTag("termite_breakable");
+	public static final TagKey<Block> BLOCKS_TERMITE = blockTag("blocks_termite");
+	public static final TagKey<Block> TERMITE_DISC_REPLACEABLE = blockTag("termite_disc_replaceable");
+	public static final TagKey<Block> TERMITE_DISC_BLOCKS = blockTag("termite_disc_blocks");
+	public static final TagKey<Biome> HAS_TERMITE_MOUND = biomeTag("has_termite_mound");
+
 
 
 	private static TagKey<Block> blockTag(String name) {

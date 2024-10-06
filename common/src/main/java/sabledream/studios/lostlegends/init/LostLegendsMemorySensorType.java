@@ -3,13 +3,11 @@ package sabledream.studios.lostlegends.init;
 import sabledream.studios.lostlegends.entity.ai.brain.CopperGolemBrain;
 import sabledream.studios.lostlegends.entity.ai.brain.CrabBrain;
 import sabledream.studios.lostlegends.entity.ai.brain.GlareBrain;
-import sabledream.studios.lostlegends.entity.ai.brain.sensor.BarnacleAttackableSensor;
-import sabledream.studios.lostlegends.entity.ai.brain.sensor.BarnacleSpecificSensor;
-import sabledream.studios.lostlegends.entity.ai.brain.sensor.CopperGolemSpecificSensor;
-import sabledream.studios.lostlegends.entity.ai.brain.sensor.GlareSpecificSensor;
+import sabledream.studios.lostlegends.entity.ai.brain.sensor.*;
 import sabledream.studios.lostlegends.platform.RegistryHelper;
 import net.minecraft.entity.ai.brain.sensor.SensorType;
 import net.minecraft.entity.ai.brain.sensor.TemptationsSensor;
+import sabledream.studios.lostlegends.tag.LostLegendsTags;
 
 import java.util.function.Supplier;
 
@@ -25,8 +23,16 @@ public final class LostLegendsMemorySensorType
 	public static final Supplier<SensorType<TemptationsSensor>> CRAB_TEMPTATIONS;
 	public static final Supplier<SensorType<BarnacleSpecificSensor>> BARNACLE_SPECIFIC_SENSOR;
 	public static final Supplier<SensorType<BarnacleAttackableSensor>> BARNACLE_ATTACKABLE_SENSOR;
+	public static final Supplier<SensorType<AttackablesSensor>> BARNACLE_ATTACKABLES_SENSORS;
+
+
+
 
 	static {
+		BARNACLE_ATTACKABLES_SENSORS = RegistryHelper.registerSensorType("barnacle_attackables_sensors", () -> new SensorType<>(() -> {
+			return new AttackablesSensor(LostLegendsTags.BARNACLE_ALWAYS_HOSTILES, e -> true, 10);
+		}));
+
 		COPPER_GOLEM_TEMPTATIONS = RegistryHelper.registerSensorType("copper_golem_temptations", () -> new SensorType<>(() -> {
 			return new TemptationsSensor(CopperGolemBrain.getTemptItems());
 		}));

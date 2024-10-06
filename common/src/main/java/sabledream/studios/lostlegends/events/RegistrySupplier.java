@@ -4,11 +4,10 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Supplier;
 
-public class RegistrySupplier<T> implements Supplier<T>
-{
+public class RegistrySupplier<T> implements Supplier<T> {
 
 	private final Identifier id;
-	private Supplier<T> supplier;
+	private final Supplier<T> supplier;
 	private T raw;
 
 	public RegistrySupplier(Identifier id, Supplier<T> supplier) {
@@ -19,6 +18,7 @@ public class RegistrySupplier<T> implements Supplier<T>
 	public RegistrySupplier(Identifier id, T raw) {
 		this.id = id;
 		this.raw = raw;
+		this.supplier = () -> raw;
 	}
 
 	public Identifier getId() {
@@ -27,6 +27,10 @@ public class RegistrySupplier<T> implements Supplier<T>
 
 	@Override
 	public T get() {
-		return this.raw != null ? this.raw : this.supplier.get();
+		// Lazy initialization: if raw is null, get it from the supplier
+		if (this.raw == null) {
+			this.raw = this.supplier.get();
+		}
+		return this.raw;
 	}
 }

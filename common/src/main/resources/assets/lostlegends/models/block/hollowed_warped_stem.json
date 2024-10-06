@@ -1,0 +1,8 @@
+{
+  "parent": "lostlegends:block/template_hollowed_log",
+  "textures": {
+    "end": "lostlegends:block/hollowed_warped_stem_top",
+    "side": "lostlegends:block/hollowed_warped_stem",
+    "inner": "minecraft:block/stripped_warped_stem"
+  }
+}

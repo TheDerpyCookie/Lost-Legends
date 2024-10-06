@@ -1,12 +1,5 @@
 package sabledream.studios.lostlegends.entity.ai.brain;
 
-import sabledream.studios.lostlegends.entity.CrabEntity;
-import sabledream.studios.lostlegends.entity.ai.brain.task.crab.*;
-import sabledream.studios.lostlegends.init.LostLegendsActivities;
-import sabledream.studios.lostlegends.init.LostLegendsEntityTypes;
-import sabledream.studios.lostlegends.init.LostLegendsMemoryModuleTypes;
-import sabledream.studios.lostlegends.init.LostLegendsMemorySensorType;
-import sabledream.studios.lostlegends.tag.LostLegendsTags;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
@@ -21,6 +14,13 @@ import net.minecraft.entity.ai.brain.task.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.TimeHelper;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import sabledream.studios.lostlegends.entity.CrabEntity;
+import sabledream.studios.lostlegends.entity.ai.brain.task.crab.*;
+import sabledream.studios.lostlegends.init.LostLegendsActivities;
+import sabledream.studios.lostlegends.init.LostLegendsEntityTypes;
+import sabledream.studios.lostlegends.init.LostLegendsMemoryModuleTypes;
+import sabledream.studios.lostlegends.init.LostLegendsMemorySensorType;
+import sabledream.studios.lostlegends.tag.LostLegendsTags;
 
 import java.util.List;
 
@@ -37,6 +37,7 @@ public final class CrabBrain
 		addCoreActivities(brain);
 		addIdleActivities(brain);
 		addLayEggActivities(brain);
+		addDanceActivities(brain);
 		addWaveActivities(brain);
 
 		brain.setCoreActivities(ImmutableSet.of(Activity.CORE));
@@ -51,8 +52,10 @@ public final class CrabBrain
 			Activity.CORE,
 			0,
 			ImmutableList.of(
+				// TODO check
+				//new FleeTask(2.0f),
 				new LookAroundTask(45, 90),
-				new WanderAroundTask(),
+//				new MoveToTargetTask(),
 				new TemptationCooldownTask(MemoryModuleType.TEMPTATION_COOLDOWN_TICKS),
 				new TemptationCooldownTask(LostLegendsMemoryModuleTypes.CRAB_WAVE_COOLDOWN.get())
 			)
@@ -63,13 +66,29 @@ public final class CrabBrain
 		brain.setTaskList(
 			LostLegendsActivities.CRAB_LAY_EGG.get(),
 			ImmutableList.of(
-//				Pair.of(0, new CrabGoToHomePositionTask()),
+				Pair.of(0, new CrabGoToHomePositionTask()),
 				Pair.of(1, new CrabLocateBurrowSpotTask()),
 				Pair.of(2, new CrabTravelToBurrowSpotTask()),
 				Pair.of(3, new CrabLayEggTask())
 			),
 			ImmutableSet.of(
 				Pair.of(LostLegendsMemoryModuleTypes.CRAB_HAS_EGG.get(), MemoryModuleState.VALUE_PRESENT)
+			)
+		);
+	}
+
+	private static void addDanceActivities(Brain<CrabEntity> brain) {
+		brain.setTaskList(
+			LostLegendsActivities.CRAB_DANCE.get(),
+			ImmutableList.of(
+				Pair.of(0, new CrabDanceTask())
+			),
+			ImmutableSet.of(
+				Pair.of(LostLegendsMemoryModuleTypes.CRAB_IS_DANCING.get(), MemoryModuleState.VALUE_PRESENT),
+				Pair.of(MemoryModuleType.BREED_TARGET, MemoryModuleState.VALUE_ABSENT),
+				Pair.of(MemoryModuleType.TEMPTING_PLAYER, MemoryModuleState.VALUE_ABSENT),
+				Pair.of(LostLegendsMemoryModuleTypes.CRAB_HAS_EGG.get(), MemoryModuleState.VALUE_ABSENT),
+				Pair.of(LostLegendsMemoryModuleTypes.CRAB_BURROW_POS.get(), MemoryModuleState.VALUE_ABSENT)
 			)
 		);
 	}
@@ -86,6 +105,7 @@ public final class CrabBrain
 				Pair.of(MemoryModuleType.TEMPTING_PLAYER, MemoryModuleState.VALUE_ABSENT),
 				Pair.of(LostLegendsMemoryModuleTypes.CRAB_WAVE_COOLDOWN.get(), MemoryModuleState.VALUE_ABSENT),
 				Pair.of(LostLegendsMemoryModuleTypes.CRAB_HAS_EGG.get(), MemoryModuleState.VALUE_ABSENT),
+				Pair.of(LostLegendsMemoryModuleTypes.CRAB_IS_DANCING.get(), MemoryModuleState.VALUE_ABSENT),
 				Pair.of(LostLegendsMemoryModuleTypes.CRAB_BURROW_POS.get(), MemoryModuleState.VALUE_ABSENT)
 			)
 		);
@@ -96,7 +116,7 @@ public final class CrabBrain
 			Activity.IDLE,
 			ImmutableList.of(
 				Pair.of(0, new TemptTask(crab -> 1.25f)),
-				Pair.of(1, new BreedTask(LostLegendsEntityTypes.CRAB.get())),
+				Pair.of(1, new CrabBreedTask(LostLegendsEntityTypes.CRAB.get())),
 				Pair.of(2, WalkTowardClosestAdultTask.create(UniformIntProvider.create(5, 16), 1.25f)),
 				Pair.of(3, new RandomTask(
 					ImmutableList.of(
@@ -108,6 +128,7 @@ public final class CrabBrain
 			ImmutableSet.of(
 				Pair.of(LostLegendsMemoryModuleTypes.CRAB_WAVE_COOLDOWN.get(), MemoryModuleState.VALUE_PRESENT),
 				Pair.of(LostLegendsMemoryModuleTypes.CRAB_HAS_EGG.get(), MemoryModuleState.VALUE_ABSENT),
+				Pair.of(LostLegendsMemoryModuleTypes.CRAB_IS_DANCING.get(), MemoryModuleState.VALUE_ABSENT),
 				Pair.of(LostLegendsMemoryModuleTypes.CRAB_BURROW_POS.get(), MemoryModuleState.VALUE_ABSENT)
 			));
 	}
@@ -116,6 +137,7 @@ public final class CrabBrain
 		crab.getBrain().resetPossibleActivities(
 			ImmutableList.of(
 				LostLegendsActivities.CRAB_LAY_EGG.get(),
+				LostLegendsActivities.CRAB_DANCE.get(),
 				LostLegendsActivities.CRAB_WAVE.get(),
 				Activity.IDLE
 			)
@@ -127,6 +149,12 @@ public final class CrabBrain
 			crab.getBrain().remember(LostLegendsMemoryModuleTypes.CRAB_HAS_EGG.get(), true);
 		} else {
 			crab.getBrain().forget(LostLegendsMemoryModuleTypes.CRAB_HAS_EGG.get());
+		}
+
+		if (crab.isDancing() && !crab.isClimbing()) {
+			crab.getBrain().remember(LostLegendsMemoryModuleTypes.CRAB_IS_DANCING.get(), true);
+		} else {
+			crab.getBrain().forget(LostLegendsMemoryModuleTypes.CRAB_IS_DANCING.get());
 		}
 	}
 
@@ -159,11 +187,10 @@ public final class CrabBrain
 			MemoryModuleType.NEAREST_VISIBLE_PLAYER,
 			MemoryModuleType.NEAREST_VISIBLE_WANTED_ITEM,
 			LostLegendsMemoryModuleTypes.CRAB_HAS_EGG.get(),
+			LostLegendsMemoryModuleTypes.CRAB_IS_DANCING.get(),
 			LostLegendsMemoryModuleTypes.CRAB_BURROW_POS.get(),
 			LostLegendsMemoryModuleTypes.CRAB_WAVE_COOLDOWN.get()
 		);
 		WAVE_COOLDOWN_PROVIDER = TimeHelper.betweenSeconds(20, 40);
 	}
 }
-
-

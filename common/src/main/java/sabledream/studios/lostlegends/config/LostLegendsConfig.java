@@ -1,12 +1,54 @@
 package sabledream.studios.lostlegends.config;
 
 import sabledream.studios.lostlegends.LostLegends;
+import sabledream.studios.lostlegends.LostLegendsClient;
+import sabledream.studios.lostlegends.api.SyncBehavior;
 import sabledream.studios.lostlegends.config.annotation.Category;
 import sabledream.studios.lostlegends.config.annotation.Description;
 import sabledream.studios.lostlegends.config.omegaconfig.api.Config;
 
+import java.util.function.Supplier;
+
+import static sabledream.studios.lostlegends.config.LostLegendsConfig.SearchMode.*;
+
 public final class LostLegendsConfig implements Config
 {
+	@Category("sawmill")
+	@Description("Makes Sawmill GUI slightly wider")
+	public boolean widegui= true;
+
+	@Category("termite")
+	@Description("onlyEatNaturalBlocks")
+	public boolean onlyEatNaturalBlocks = true;
+
+	@Description("maxNaturalDistance")
+	public int maxNaturalDistance = 10;
+
+	@Description("maxDistance")
+	public int maxDistance = 32;
+
+	@Description("logHollowing")
+	public boolean logHollowing = true;
+
+
+	@Category("tumbleweed")
+	@Description("spawnTumbleweed")
+	public boolean spawnTumbleweed = true;
+
+	@Description("tumbleweedSpawnCap")
+	public int tumbleweedSpawnCap = 10;
+
+	@Description("leashedTumbleweed")
+	public boolean leashedTumbleweed = false;
+
+	@Description("tumbleweedDestroysCrops")
+	public boolean tumbleweedDestroysCrops = true;
+
+	@Description(value = "tumbleweedRotatesToLookDirection")
+	public boolean tumbleweedRotatesToLookDirection = false;
+
+
+
 	@Category("Barnacle")
 	@Description("Enable barnacle")
 	public boolean enableBarnacle = true;
@@ -205,4 +247,22 @@ public final class LostLegendsConfig implements Config
 	public String getName() {
 		return LostLegends.MOD_ID;
 	}
+
+	public static boolean hasSearchBar(int recipeCount) {
+		var s = SEARCH_MODE.get();
+		return switch (s) {
+			case ON -> true;
+			case OFF -> false;
+			case AUTOMATIC -> LostLegendsClient.hasManyRecipes();
+			case DYNAMIC -> recipeCount > SEARCH_BAR_THRESHOLD.get();
+		};
+	}
+	public enum SearchMode {
+		OFF, ON, AUTOMATIC, DYNAMIC
+	}
+
+	public static Supplier<SearchMode> SEARCH_MODE;
+	public static Supplier<Integer> SEARCH_BAR_THRESHOLD;
+
+
 }

@@ -1,6 +1,8 @@
 package sabledream.studios.lostlegends;
 
+
 import sabledream.studios.lostlegends.api.MoobloomVariantManager;
+import sabledream.studios.lostlegends.api.TermiteManager;
 import sabledream.studios.lostlegends.config.LostLegendsConfig;
 import sabledream.studios.lostlegends.config.omegaconfig.OmegaConfig;
 import sabledream.studios.lostlegends.events.lifecycle.AddSpawnBiomeModificationsEvent;
@@ -15,6 +17,7 @@ import sabledream.studios.lostlegends.platform.BiomeModifications;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 public final class LostLegends
 {
@@ -32,6 +35,7 @@ public final class LostLegends
 		return MOD_ID + ":" + name;
 	}
 
+
 	public static LostLegendsConfig getConfig() {
 		return CONFIG;
 	}
@@ -41,9 +45,7 @@ public final class LostLegends
 
 	public static void init() {
 		ModChecker.setupModCompat();
-
 		LostLegendsBlockEntity.TILES.register();
-
 		LostLegendsActivities.init();
 		LostLegendsArmorMaterials.init();
 		LostLegendsBlockSetTypes.init();
@@ -66,6 +68,7 @@ public final class LostLegends
 		DatapackSyncEvent.EVENT.addListener(MoobloomVariantsSyncPacket::sendToClient);
 	}
 
+
 	public static void postInit() {
 		BiomeModifications.addButtercupFeature();
 		BiomeModifications.addTinycactusFeature();
@@ -74,6 +77,8 @@ public final class LostLegends
 		LostLegendsItems.postInit();
 		LostLegendsBlockEntityTypes.postInit();
 		LostLegendsVillagerProfessions.postInit();
+		TermiteManager.Termite.addDegradableBlocks();
+		TermiteManager.Termite.addNaturalDegradableBlocks();
 	}
 
 	private static void registerServerDataListeners(final RegisterReloadListenerEvent event) {

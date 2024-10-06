@@ -30,6 +30,7 @@ public final class LostLegendsBlockSetTypes
 		SoundEvents.BLOCK_STONE_BUTTON_CLICK_ON
 	);
 
+
 	public static void init() {
 		RegistryHelper.registerBlockSetType(COPPER);
 	}

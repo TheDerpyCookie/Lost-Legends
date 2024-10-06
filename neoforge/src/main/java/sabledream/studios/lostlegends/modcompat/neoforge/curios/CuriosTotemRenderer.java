@@ -1,6 +1,6 @@
 package sabledream.studios.lostlegends.modcompat.neoforge.curios;
 
-/*
+
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -50,4 +50,4 @@ public class CuriosTotemRenderer implements ICurioRenderer
 			0
 		);
 	}
-}*/
+}

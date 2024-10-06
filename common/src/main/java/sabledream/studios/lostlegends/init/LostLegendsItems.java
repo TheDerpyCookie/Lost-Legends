@@ -1,7 +1,11 @@
 package sabledream.studios.lostlegends.init;
 
+import net.minecraft.util.DyeColor;
 import sabledream.studios.lostlegends.LostLegends;
 import sabledream.studios.lostlegends.item.CrabClawItem;
+import sabledream.studios.lostlegends.item.IceStaffItem;
+import sabledream.studios.lostlegends.item.ShardItem;
+import sabledream.studios.lostlegends.item.StainedShardItem;
 import sabledream.studios.lostlegends.platform.RegistryHelper;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
@@ -75,16 +79,71 @@ public final class LostLegendsItems
 	public static final Supplier<Item> COWTUS_SPAWN_EGG;
 	public static final Supplier<Item> BAMBMOO_SPAWN_EGG;
 	public static final Supplier<Item> MELON_GOLEM_SPAWN_EGG;
-
 	public static final Supplier<BlockItem> CARVED_MELON;
 	public static final Supplier<BlockItem> MELON_GOLEM_HEAD_BLINK;
 	public static final Supplier<BlockItem> MELON_GOLEM_HEAD_SHOOT;
 	public static final Supplier<BlockItem> MELON_LANTERN;
 	public static final Supplier<BlockItem> RAINBOW_BED;
+	public static final Supplier<BlockItem> TERMITE_MOUND;
+	public static final Supplier<BlockItem> TUMBLEWEED;
+	public static final Supplier<BlockItem> RAINBOW_CARPET;
+	public static final Supplier<BlockItem> RAINBOW_WOOL;
+	public static final Supplier<BlockItem> HOLLOWED_WARPED_STEM_ITEM;
+	public static final Supplier<BlockItem> HOLLOWED_CRIMSON_STEM_ITEM;
+	public static final Supplier<BlockItem> STRIPPED_HOLLOWED_OAK_LOG_ITEM;
+	public static final Supplier<BlockItem> STRIPPED_HOLLOWED_SPRUCE_LOG_ITEM;
+	public static final Supplier<BlockItem> STRIPPED_HOLLOWED_BIRCH_LOG_ITEM;
+	public static final Supplier<BlockItem> STRIPPED_HOLLOWED_CHERRY_LOG_ITEM;
+	public static final Supplier<BlockItem> STRIPPED_HOLLOWED_JUNGLE_LOG_ITEM;
+	public static final Supplier<BlockItem> STRIPPED_HOLLOWED_ACACIA_LOG_ITEM;
+	public static final Supplier<BlockItem> STRIPPED_HOLLOWED_DARK_OAK_LOG_ITEM;
+	public static final Supplier<BlockItem> STRIPPED_HOLLOWED_MANGROVE_LOG_ITEM;
+	public static final Supplier<BlockItem> STRIPPED_HOLLOWED_CRIMSON_STEM_ITEM;
+	public static final Supplier<BlockItem> STRIPPED_HOLLOWED_WARPED_STEM_ITEM;
+	public static final Supplier<BlockItem> HOLLOWED_OAK_LOG_ITEM;
+	public static final Supplier<BlockItem> HOLLOWED_SPRUCE_LOG_ITEM;
+	public static final Supplier<BlockItem> HOLLOWED_BIRCH_LOG_ITEM;
+	public static final Supplier<BlockItem> HOLLOWED_JUNGLE_LOG_ITEM;
+	public static final Supplier<BlockItem> HOLLOWED_ACACIA_LOG_ITEM;
+	public static final Supplier<BlockItem> HOLLOWED_DARK_OAK_LOG_ITEM;
+	public static final Supplier<BlockItem> HOLLOWED_MANGROVE_LOG_ITEM;
+	public static final Supplier<BlockItem> HOLLOWED_CHERRY_LOG_ITEM;
+
+	public static final Supplier<Item> ICEOLOGER_STAFF;
 
 
+	public static final Supplier<Item> ICE_SHARD;
 
 	static {
+		ICE_SHARD = RegistryHelper.registerItem("ice_shard", ()-> new Item(new Item.Settings()));
+		ICEOLOGER_STAFF = RegistryHelper.registerItem("ice_staff", () -> new IceStaffItem(new Item.Settings().maxCount(1)));
+		HOLLOWED_WARPED_STEM_ITEM = RegistryHelper.registerItem("hollowed_warped_stem", () -> new BlockItem(LostLegendsBlocks.HOLLOWED_WARPED_STEM.get(), new Item.Settings().maxCount(64)));
+		HOLLOWED_CRIMSON_STEM_ITEM = RegistryHelper.registerItem("hollowed_crimson_stem", () -> new BlockItem(LostLegendsBlocks.HOLLOWED_CRIMSON_STEM.get(), new Item.Settings().maxCount(64)));
+		STRIPPED_HOLLOWED_OAK_LOG_ITEM = RegistryHelper.registerItem("stripped_hollowed_oak_log", () -> new BlockItem(LostLegendsBlocks.STRIPPED_HOLLOWED_OAK_LOG.get(), new Item.Settings().maxCount(64)));
+		STRIPPED_HOLLOWED_SPRUCE_LOG_ITEM = RegistryHelper.registerItem("stripped_hollowed_spruce_log", () -> new BlockItem(LostLegendsBlocks.STRIPPED_HOLLOWED_SPRUCE_LOG.get(), new Item.Settings().maxCount(64)));
+		STRIPPED_HOLLOWED_BIRCH_LOG_ITEM = RegistryHelper.registerItem("stripped_hollowed_birch_log", () -> new BlockItem(LostLegendsBlocks.STRIPPED_HOLLOWED_BIRCH_LOG.get(), new Item.Settings().maxCount(64)));
+		STRIPPED_HOLLOWED_CHERRY_LOG_ITEM = RegistryHelper.registerItem("stripped_hollowed_cherry_log", () -> new BlockItem(LostLegendsBlocks.STRIPPED_HOLLOWED_CHERRY_LOG.get(), new Item.Settings().maxCount(64)));
+		STRIPPED_HOLLOWED_JUNGLE_LOG_ITEM = RegistryHelper.registerItem("stripped_hollowed_jungle_log", () -> new BlockItem(LostLegendsBlocks.STRIPPED_HOLLOWED_JUNGLE_LOG.get(), new Item.Settings().maxCount(64)));
+		STRIPPED_HOLLOWED_ACACIA_LOG_ITEM = RegistryHelper.registerItem("stripped_hollowed_acacia_log", () -> new BlockItem(LostLegendsBlocks.STRIPPED_HOLLOWED_ACACIA_LOG.get(), new Item.Settings().maxCount(64)));
+		STRIPPED_HOLLOWED_DARK_OAK_LOG_ITEM = RegistryHelper.registerItem("stripped_hollowed_dark_oak_log", () -> new BlockItem(LostLegendsBlocks.STRIPPED_HOLLOWED_DARK_OAK_LOG.get(), new Item.Settings().maxCount(64)));
+		STRIPPED_HOLLOWED_MANGROVE_LOG_ITEM = RegistryHelper.registerItem("stripped_hollowed_mangrove_log", () -> new BlockItem(LostLegendsBlocks.STRIPPED_HOLLOWED_MANGROVE_LOG.get(), new Item.Settings().maxCount(64)));
+		STRIPPED_HOLLOWED_CRIMSON_STEM_ITEM = RegistryHelper.registerItem("stripped_hollowed_crimson_stem", () -> new BlockItem(LostLegendsBlocks.STRIPPED_HOLLOWED_CRIMSON_STEM.get(), new Item.Settings().maxCount(64)));
+		STRIPPED_HOLLOWED_WARPED_STEM_ITEM = RegistryHelper.registerItem("stripped_hollowed_warped_stem", () -> new BlockItem(LostLegendsBlocks.STRIPPED_HOLLOWED_WARPED_STEM.get(), new Item.Settings().maxCount(64)));
+		HOLLOWED_OAK_LOG_ITEM = RegistryHelper.registerItem("hollowed_oak_log", () -> new BlockItem(LostLegendsBlocks.HOLLOWED_OAK_LOG.get(), new Item.Settings().maxCount(64)));
+		HOLLOWED_SPRUCE_LOG_ITEM = RegistryHelper.registerItem("hollowed_spruce_log", () -> new BlockItem(LostLegendsBlocks.HOLLOWED_SPRUCE_LOG.get(), new Item.Settings().maxCount(64)));
+		HOLLOWED_BIRCH_LOG_ITEM = RegistryHelper.registerItem("hollowed_birch_log", () -> new BlockItem(LostLegendsBlocks.HOLLOWED_BIRCH_LOG.get(), new Item.Settings().maxCount(64)));
+		HOLLOWED_JUNGLE_LOG_ITEM = RegistryHelper.registerItem("hollowed_jungle_log", () -> new BlockItem(LostLegendsBlocks.HOLLOWED_JUNGLE_LOG.get(), new Item.Settings().maxCount(64)));
+		HOLLOWED_ACACIA_LOG_ITEM = RegistryHelper.registerItem("hollowed_acacia_log", () -> new BlockItem(LostLegendsBlocks.HOLLOWED_ACACIA_LOG.get(), new Item.Settings().maxCount(64)));
+		HOLLOWED_DARK_OAK_LOG_ITEM = RegistryHelper.registerItem("hollowed_dark_oak_log", () -> new BlockItem(LostLegendsBlocks.HOLLOWED_DARK_OAK_LOG.get(), new Item.Settings().maxCount(64)));
+		HOLLOWED_MANGROVE_LOG_ITEM = RegistryHelper.registerItem("hollowed_mangrove_log", () -> new BlockItem(LostLegendsBlocks.HOLLOWED_MANGROVE_LOG.get(), new Item.Settings().maxCount(64)));
+		HOLLOWED_CHERRY_LOG_ITEM = RegistryHelper.registerItem("hollowed_cherry_log", () -> new BlockItem(LostLegendsBlocks.HOLLOWED_CHERRY_LOG.get(), new Item.Settings().maxCount(64)));
+
+
+
+		RAINBOW_CARPET = RegistryHelper.registerItem("rainbow_carpet", () -> new BlockItem(LostLegendsBlocks.RAINBOW_CARPET.get(), new Item.Settings().maxCount(64)));
+		RAINBOW_WOOL = RegistryHelper.registerItem("rainbow_wool", () -> new BlockItem(LostLegendsBlocks.RAINBOW_WOOL.get(), new Item.Settings().maxCount(64)));
+		TUMBLEWEED = RegistryHelper.registerItem("tumbleweed", () -> new BlockItem(LostLegendsBlocks.TUMBLEWEED.get(), new Item.Settings().maxCount(64)));
+		TERMITE_MOUND = RegistryHelper.registerItem("termite_mound", () -> new BlockItem(LostLegendsBlocks.TERMITE_MOUND.get(), new Item.Settings().maxCount(64)));
 		RAINBOW_BED = RegistryHelper.registerItem("rainbow_bed", () -> new BlockItem(LostLegendsBlocks.RAINBOW_BED.get(), new Item.Settings().maxCount(64)));
 		CARVED_MELON = RegistryHelper.registerItem("carved_melon", () -> new BlockItem(LostLegendsBlocks.CARVED_MELON.get(), new Item.Settings().maxCount(64)));
 		MELON_GOLEM_HEAD_BLINK = RegistryHelper.registerItem("melon_golem_blink", () -> new BlockItem(LostLegendsBlocks.MELON_GOLEM_HEAD_BLINK.get(), new Item.Settings().maxCount(64)));

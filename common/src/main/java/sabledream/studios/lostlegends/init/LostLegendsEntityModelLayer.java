@@ -6,6 +6,7 @@ import net.minecraft.network.packet.s2c.play.EntitySetHeadYawS2CPacket;
 import sabledream.studios.lostlegends.LostLegends;
 import sabledream.studios.lostlegends.client.render.block.RainbowBedBlockEntityRenderer;
 import sabledream.studios.lostlegends.client.render.entity.model.*;
+import sabledream.studios.lostlegends.client.render.entity.renderer.BarnacleRenderer;
 import sabledream.studios.lostlegends.entity.CrabEntity;
 import sabledream.studios.lostlegends.entity.Meerkat;
 import sabledream.studios.lostlegends.platform.RegistryHelper;
@@ -35,6 +36,7 @@ public final class LostLegendsEntityModelLayer
 	public static final EntityModelLayer PLAYER_ILLUSION_LAYER;
 	public static final EntityModelLayer VULTURE_LAYER;
 	public static final EntityModelLayer OSTRICH;
+	public static final EntityModelLayer FIREFLY;
 
 
 	public static final EntityModelLayer FANCY_CHICKEN;
@@ -47,8 +49,13 @@ public final class LostLegendsEntityModelLayer
 
 	public static final EntityModelLayer MUDDY_PIG_ENTITY_MODEL_LAYER;
 
+	public static final EntityModelLayer TUMBLEWEED;
+
+	public static final EntityModelLayer BARNACLEE;
+
 
 	static {
+		FIREFLY = new EntityModelLayer(LostLegends.makeID("firefly"), "main");
 		COPPER_GOLEM_LAYER = new EntityModelLayer(LostLegends.makeID("copper_golem"), "main");
 		GLARE_LAYER = new EntityModelLayer(LostLegends.makeID("glare"), "main");
 		ICEOLOGER_LAYER = new EntityModelLayer(LostLegends.makeID("iceologer"), "main");
@@ -70,7 +77,8 @@ public final class LostLegendsEntityModelLayer
 		VILER_WITCH_ENTITY_MODEL_LAYER = new EntityModelLayer(LostLegends.makeID("viler_witch"),"main");
 		MUDDY_PIG_ENTITY_MODEL_LAYER = new EntityModelLayer(LostLegends.makeID("muddy_pig"),"head");
 		OSTRICH = new EntityModelLayer(LostLegends.makeID("ostrich"), "main");
-
+		TUMBLEWEED = new EntityModelLayer(LostLegends.makeID("tumbleweed"), "main");
+		BARNACLEE = new EntityModelLayer(LostLegends.makeID("barnaclee"), "main");
 	}
 
 	public static void init() {
@@ -94,6 +102,9 @@ public final class LostLegendsEntityModelLayer
 		RegistryHelper.registerEntityModelLayer(VILER_WITCH_ENTITY_MODEL_LAYER, VilerWitchModel::getTexturedModelData);
 		RegistryHelper.registerEntityModelLayer(MUDDY_PIG_ENTITY_MODEL_LAYER, MuddyPigModel::getTexturedModelData);
 		RegistryHelper.registerEntityModelLayer(OSTRICH, OstrichModel::getTexturedModelData);
+		RegistryHelper.registerEntityModelLayer(FIREFLY, FireflyEntityModel::getTexturedModelData);
+		RegistryHelper.registerEntityModelLayer(TUMBLEWEED, TumbleweedModel::createBodyLayer);
+		RegistryHelper.registerEntityModelLayer(BARNACLEE,BarnacleModel::createBodyLayer );
 	}
 
 	private LostLegendsEntityModelLayer() {
